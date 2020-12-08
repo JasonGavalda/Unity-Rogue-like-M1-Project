@@ -463,12 +463,44 @@ PrefabInstance:
       value: cow
       objectReference: {fileID: 0}
     - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: cdDeath
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.armor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
       propertyPath: playerStats.size
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
       propertyPath: playerStats.speed
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.intelligence
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2005674412059558857, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}
+      propertyPath: stats.currentHealth
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 782f13ffa8ecee94095e0d481d99cb3a, type: 3}

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
        foreach (GameObject enemy in enemies) {
-            if (enemy.GetComponent<Enemy>().enemyDead())
+            if (enemy.GetComponent<Entity>().getIsDead())
                 this.enemies.Remove(enemy);
         }
        if (this.enemies.Count == 0)
