@@ -8,4 +8,5 @@ public struct Stats
     int hp;
     int damage;
     int intelligence;
+    float speed;
 }
