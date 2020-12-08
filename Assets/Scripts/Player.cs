@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
         this.transform.localScale = new Vector3(playerStats.size, playerStats.size, playerStats.size);
     }
 
+    public StatsModifier getStatsModifier() { return this.playerStatsModifier; }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +24,13 @@ public class Player : MonoBehaviour
         this.transform.localScale = new Vector3(direction.x * playerStats.size / Mathf.Abs(direction.x), playerStats.size, playerStats.size);
 
         this.transform.position += direction * playerStats.speed * Time.deltaTime;
-        Debug.Log(direction);
+
+        if (Input.GetButtonDown("Fire1")){
+            //this.Attack();
+        }
+
+        if(playerStats.hp <= 0){
+            Debug.Log("you died");
+        }
     }
 }
