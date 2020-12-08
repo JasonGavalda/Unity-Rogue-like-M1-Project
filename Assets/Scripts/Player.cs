@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
         this.transform.position += direction * playerStats.speed * Time.deltaTime;
 
-        if (Input.GetButtonDown("Fire1")){
+        if (Input.GetButtonDown("Mouse1")){
             //this.Attack();
         }
 
