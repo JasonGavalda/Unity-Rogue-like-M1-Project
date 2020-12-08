@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    protected Stats playerStat;
+    protected Stats playerStats;
 
     protected Rigidbody2D rb;
 
@@ -16,7 +16,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 direction = new Vector2( Input.GetAxis( "Horizontal"), Input.GetAxis( "Vertical"));
+        Vector3 direction = new Vector3( Input.GetAxis( "Horizontal"), Input.GetAxis( "Vertical"), 0);
+        this.g
 
+
+        this.transform.position += direction * playerStats.speed * Time.deltaTime;
+        Debug.Log(direction);
     }
 }

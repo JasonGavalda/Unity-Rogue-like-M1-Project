@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public struct Stats 
 {
-    int armor;
-    int hp;
-    int damage;
-    int intelligence;
-    float speed;
+    public int armor;
+    public int hp;
+    public int damage;
+    public int intelligence;
+
+    public float size;
+    public float speed;
 }
