@@ -6,7 +6,8 @@ using UnityEngine;
 public struct Stats 
 {
     public float armor;
-    public float hp;
+    public float currentHealth;
+    public float maxHealth;
     public float damage;
     public float intelligence;
     public float size;
