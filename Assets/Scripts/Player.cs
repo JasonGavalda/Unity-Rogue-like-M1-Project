@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
             //this.Attack();
         }
 
-        if(playerStats.hp <= 0){
+        if(playerStats.currentHealth <= 0){
             Debug.Log("you died");
         }
     }
