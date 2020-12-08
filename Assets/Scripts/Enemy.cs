@@ -9,16 +9,23 @@ public class Enemy : MonoBehaviour
     protected StatsModifier playerStatsModifier;
 
     bool isDead = false;
-
+    private float cdDeath;
     // Start is called before the first frame update
     void Start()
     {
+        cdDeath = 3;
         enemyStats.currentHealth = enemyStats.maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isDead)
+        {
+            cdDeath -= Time.deltaTime;
+            if (cdDeath < 0)
+                Destroy(this.gameObject);
+        }
         
     }
 
