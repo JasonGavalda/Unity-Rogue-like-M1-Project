@@ -6,13 +6,15 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     protected Stats playerStats;
-
+    protected StatsModifier playerStatsModifier;
     protected Rigidbody2D rb;
 
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        this.transform.localScale = new Vector3(playerStats.size, playerStats.size, playerStats.size);
     }
+
     // Update is called once per frame
     void Update()
     {

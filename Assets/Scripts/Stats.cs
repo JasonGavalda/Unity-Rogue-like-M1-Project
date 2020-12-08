@@ -5,11 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public struct Stats 
 {
-    public int armor;
-    public int hp;
-    public int damage;
-    public int intelligence;
-
+    public float armor;
+    public float hp;
+    public float damage;
+    public float intelligence;
     public float size;
     public float speed;
 }
