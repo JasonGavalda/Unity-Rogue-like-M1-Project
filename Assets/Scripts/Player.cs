@@ -6,6 +6,9 @@ public class Player : Entity
 {
     protected Rigidbody2D rb;
 
+    public Attack basicAttack;
+    public Attack specialAttack;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -23,12 +26,21 @@ public class Player : Entity
         this.transform.position += direction * stats.speed * Time.deltaTime;
 
         if (Input.GetButtonDown("Mouse1")){
-            this.Attack(); 
+            this.Attack("basic"); 
+        }
+        else if (Input.GetButtonDown("Mouse2"))
+        {
+            this.Attack("special");
         }
     }
 
-    void Attack()
+    void Attack(string pString)
     {
-        //animator.SetTrigger("Attack");
+        //animator.SetTrigger("basicAttack");
+        //animator.SetTrigger("specialAttack");
+        if (pString == "basic")
+            basicAttack.tryAttack();
+        else if (pString == "special")
+            specialAttack.tryAttack();
     }
 }

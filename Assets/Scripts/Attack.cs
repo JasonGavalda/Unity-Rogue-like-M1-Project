@@ -18,6 +18,11 @@ public abstract class Attack : MonoBehaviour
         }
     }
 
+    public bool canAttack()
+    {
+        return (nextAttackTime <= 0f);
+    }
+
     private void Update()
     {
         if (nextAttackTime > 0f)
