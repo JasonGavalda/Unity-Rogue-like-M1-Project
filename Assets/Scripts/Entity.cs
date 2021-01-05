@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Entity : MonoBehaviour
 {
     [SerializeField]
     protected Stats stats;
+    protected string[] layers;
 
 
     protected bool isDead;
@@ -46,4 +48,9 @@ public class Entity : MonoBehaviour
 
 
     public void TakeDamage(int pDamage) { stats.currentHealth = stats.currentHealth - (pDamage / stats.armor); }
+
+    public int getLayers()
+    {
+        return LayerMask.GetMask(layers);
+    }
 }

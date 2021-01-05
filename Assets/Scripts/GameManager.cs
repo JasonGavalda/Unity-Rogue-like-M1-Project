@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("enemy")){ 
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){ 
             this.enemies.Add(enemy);
         }
     }
