@@ -9,13 +9,13 @@ public class AttackCAC : Attack
     public float radius;
     protected Collider2D[] colliders;
     public bool isPlayer;
-    [SerializeField]
-    private string[] layers;
-    private int layersToCheck;
 
-    private void Start()
+    protected int layersToCheck;
+
+
+    void Start()
     {
-        layersToCheck = LayerMask.GetMask(layers);
+        layersToCheck = gameObject.GetComponent<Entity>().getLayers();
     }
 
     //void OnTriggerEnter(Collider other)
