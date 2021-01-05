@@ -23,7 +23,12 @@ public class Player : Entity
         this.transform.position += direction * stats.speed * Time.deltaTime;
 
         if (Input.GetButtonDown("Mouse1")){
-            //this.Attack();
+            this.Attack(); 
         }
+    }
+
+    void Attack()
+    {
+        //animator.SetTrigger("Attack");
     }
 }
