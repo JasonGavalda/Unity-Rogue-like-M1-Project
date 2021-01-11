@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4065905923761759921}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260835623551826864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.289, y: 0.082, z: 0}
+  m_LocalPosition: {x: -0.25, y: 0.082, z: 0}
   m_LocalScale: {x: 0.64371806, y: 0.64371806, z: 0.64371806}
   m_Children: []
   m_Father: {fileID: 909723943031744718}
@@ -42,8 +42,11 @@ GameObject:
   - component: {fileID: 909723943031744719}
   - component: {fileID: 909723943031744704}
   - component: {fileID: 909723943031744705}
-  - component: {fileID: 8749613006060614776}
-  m_Layer: 0
+  - component: {fileID: 4533249820898684032}
+  - component: {fileID: 8923610130359252640}
+  - component: {fileID: 5812748540784113048}
+  - component: {fileID: 7831572491749445043}
+  m_Layer: 9
   m_Name: BrutoBear2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 909723943031744706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.55, y: -0.512, z: 0}
-  m_LocalScale: {x: 1.81042, y: 1.81042, z: 1.81042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4065905923761759921}
   m_Father: {fileID: 0}
@@ -102,12 +105,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -610613655
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 6608388320584833601, guid: 77ceecdfd337ed841ac0515870f08dff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.5, y: 0.54}
@@ -124,19 +127,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 909723943031744706}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &909723943031744705
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -163,7 +166,78 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.54}
   m_EdgeRadius: 0
---- !u!114 &8749613006060614776
+--- !u!58 &4533249820898684032
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909723943031744706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4
+--- !u!114 &8923610130359252640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909723943031744706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 1
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
+--- !u!114 &5812748540784113048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909723943031744706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3ac7dcd006da14597fe9b8ea2cb5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats:
+    armor: 1
+    maxHealth: 1
+    strengh: 1
+    intelligence: 1
+    size: 1
+    speed: 3
+    currentHealth: 1
+  layers:
+  - Player
+  cdDeath: 3
+  forceX: 200
+  forceY: 300
+  nextWayPointDistance: 0.5
+  punch: {fileID: 7831572491749445043}
+--- !u!114 &7831572491749445043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,6 +252,4 @@ MonoBehaviour:
   damage: 1
   cooldown: 2
   center: {fileID: 260835623551826864}
-  radius: 0.2
-  isPlayer: 0
-  layers: []
+  radius: 0.3
