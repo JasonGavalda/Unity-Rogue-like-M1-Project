@@ -38,7 +38,12 @@ public class AttackCAC : Attack
         foreach (Collider2D entity in colliders)
         {
             if (entity.gameObject != this.gameObject)
-                entity.gameObject.GetComponent<Entity>().TakeDamage(damage + attackerStr);
+            {
+                Entity ent = entity.gameObject.GetComponent<Entity>();
+                if(ent != null)
+                    ent.TakeDamage(damage + attackerStr);
+            }
+
         }
     }
 

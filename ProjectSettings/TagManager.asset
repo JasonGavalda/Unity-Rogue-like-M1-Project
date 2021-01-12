@@ -42,12 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Middleground
-    uniqueID: 1815566437
-    locked: 0
   - name: Background
     uniqueID: 4220924677
     locked: 0
+  - name: Middleground
+    uniqueID: 1815566437
+    locked: 0
   - name: Entities
     uniqueID: 3684353641
+    locked: 0
+  - name: Forground
+    uniqueID: 1991966509
     locked: 0
