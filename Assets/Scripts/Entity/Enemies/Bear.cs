@@ -18,6 +18,8 @@ public class Bear : Enemy
     Seeker seeker;
     public AttackCAC punch;
 
+    public Animator animator;
+
     void Start()
     {
         seeker = GetComponent<Seeker>();
@@ -110,6 +112,11 @@ public class Bear : Enemy
             moveTowardPos((Vector2)path.vectorPath[currentWayPoint]);
         else
             moveTowardPos(new Vector2(this.transform.position.x- aTarget.transform.position.x, aTarget.transform.position.y));
+
+        if (distanceWithTarget <= punch.radius && punch.canAttack())
+            animator.SetBool("Space", true);
+        else
+            animator.SetBool("Space", false);
     }
 }
 
