@@ -9,7 +9,7 @@ public abstract class Enemy : Entity
 
     protected GameObject aTarget;
     
-    void OnTriggerEnter2D(Collider2D collider)
+    public void foundTarget(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
