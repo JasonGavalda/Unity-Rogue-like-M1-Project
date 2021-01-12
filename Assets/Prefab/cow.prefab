@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2005674412059558857}
   - component: {fileID: 8574371750391164717}
   - component: {fileID: 8009896179961291020}
-  m_Layer: 0
+  - component: {fileID: 212324532337930816}
+  m_Layer: 8
   m_Name: cow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +31,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.774, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2671652947637998509}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -71,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -610613655
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 89527dd147b986b40990e60798438318, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -97,12 +99,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53560c245384cf4a833c5dd01976171, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats:
+  stats:
     armor: 1
-    hp: 5
-    damage: 1
-    intelligence: 1
-    speed: 1
+    maxHealth: 5
+    strengh: 0
+    intelligence: 10
+    size: 1
+    speed: 4
+    currentHealth: 5
+  layers:
+  - Player
+  - Enemy
+  cdDeath: 3
+  basicAttack: {fileID: 212324532337930816}
+  specialAttack: {fileID: 0}
 --- !u!50 &8574371750391164717
 Rigidbody2D:
   serializedVersion: 4
@@ -150,3 +160,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.15552127, y: 0.44544542}
   m_EdgeRadius: 0
+--- !u!114 &212324532337930816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443812434269870907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48018796c4dd5954fac07d4b089d1114, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  cooldown: 0.5
+  center: {fileID: 5301943384622357304}
+  radius: 0.2
+--- !u!1 &5301943384622357304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2671652947637998509}
+  m_Layer: 0
+  m_Name: Attack center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2671652947637998509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5301943384622357304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.296, y: -0.045, z: -2.3847086}
+  m_LocalScale: {x: 0.91601104, y: 0.8702105, z: 0.8702105}
+  m_Children: []
+  m_Father: {fileID: 1443812434269870905}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
