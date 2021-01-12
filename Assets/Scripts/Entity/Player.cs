@@ -8,14 +8,15 @@ public class Player : Entity
     public Attack specialAttack;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 direction = new Vector3( Input.GetAxis( "Horizontal"), Input.GetAxis( "Vertical"), 0);
 
         if(direction.x != 0)
             this.transform.localScale = new Vector3(direction.x * stats.size / Mathf.Abs(direction.x), stats.size, stats.size);
 
-        this.transform.position += direction * stats.speed * Time.deltaTime;
+        rb.MovePosition( rb.transform.position + direction * stats.speed * Time.deltaTime);
+   
 
         if (Input.GetButtonDown("Fire1")){
             this.Attack("basic"); 

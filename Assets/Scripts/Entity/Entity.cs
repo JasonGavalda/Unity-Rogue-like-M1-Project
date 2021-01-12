@@ -26,23 +26,16 @@ public class Entity : MonoBehaviour
         isDead = false;
     }
 
-    private void Update()
+    private void DestroyEntity()
     {
-        if (isDead)
-        {
-            cdDeath -= Time.deltaTime;
-            if (cdDeath < 0)
-                Destroy(this.gameObject);
-        }
-
-        if (stats.currentHealth <= 0)
-            this.Die();
+        Destroy(this.gameObject);
     }
 
     void Die()
     {
         isDead = true;
         GetComponent<Collider2D>().enabled = false;
+        Invoke("DestroyEntity", 0f);
         //this.enabled = false;
     }
 
@@ -57,6 +50,8 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int pDamage) {
         Debug.Log(this.gameObject.tag + " took damage");
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
+        if (stats.currentHealth <= 0)
+            this.Die();
     }
 
     public int getLayers()
