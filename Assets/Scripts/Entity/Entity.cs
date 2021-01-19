@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class Entity : MonoBehaviour
@@ -53,6 +54,8 @@ public class Entity : MonoBehaviour
         if (stats.currentHealth <= 0)
             this.Die();
     }
+
+    public void Heal(int pHeal) { stats.currentHealth = Math.Min(stats.currentHealth + pHeal, stats.maxHealth); }
 
     public int getLayers()
     {
