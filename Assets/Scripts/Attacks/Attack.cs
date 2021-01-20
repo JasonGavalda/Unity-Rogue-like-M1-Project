@@ -9,15 +9,17 @@ public abstract class Attack : MonoBehaviour
     public float cooldown;
     float nextAttackTime = 0f;
 
-    public void tryAttack()
+    public bool tryAttack()
     {
         if (nextAttackTime <= 0f)
         {
             nextAttackTime = cooldown;
             useAttack();
+            return true;
         }
         else
             Debug.Log("attack on cd");
+        return false;
     }
 
     public bool canAttack()

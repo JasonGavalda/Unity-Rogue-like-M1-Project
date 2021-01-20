@@ -16,6 +16,9 @@ public class Entity : MonoBehaviour
     [SerializeField]
     protected float cdDeath;
 
+    [SerializeField]
+    public Animator animator;
+
     protected Rigidbody2D rb;
 
     private void Start()
@@ -58,4 +61,16 @@ public class Entity : MonoBehaviour
     {
         return LayerMask.GetMask(layers);
     }
+
+    public void animateMove()
+    {
+        animator.SetFloat("Speed", Mathf.Max(Mathf.Abs(Input.GetAxis("Horizontal")), Mathf.Abs(Input.GetAxis("Vertical"))) *stats.speed);
+        
+    }
+
+    public void animateAttack()
+    {
+        animator.SetTrigger("Attack");
+    }
 }
+ 

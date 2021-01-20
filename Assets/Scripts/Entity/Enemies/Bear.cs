@@ -10,6 +10,7 @@ public class Bear : Enemy
     public float forceY = 10f;
     public float nextWayPointDistance = 3f;
 
+
     Path path;
     int currentWayPoint = 0;
     bool EOP = false;
@@ -24,7 +25,7 @@ public class Bear : Enemy
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
-
+        InvokeRepeating("animateMove", 0f, 0.5f);
     }
 
     void moveTowardPos(Vector2 pos)
@@ -81,7 +82,8 @@ public class Bear : Enemy
     {
         rb.velocity = new Vector2(0,0);
         yield return new WaitForSeconds(0.4f);
-        punch.tryAttack();
+        if (punch.tryAttack())
+            animateAttack();
     }
 
     // Update is called once per frame
