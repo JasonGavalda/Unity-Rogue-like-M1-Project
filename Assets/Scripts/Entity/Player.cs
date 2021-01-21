@@ -28,6 +28,7 @@ public class Player : Entity
         {
             this.Attack("special");
         }
+        animateMove();
     }
 
     void Attack(string pString)
@@ -38,6 +39,7 @@ public class Player : Entity
         {
             Debug.Log("paf");
             basicAttack.tryAttack();
+            animateAttack();
         }
 
         //else if (pString == "special")
