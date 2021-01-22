@@ -58,6 +58,7 @@ public class Entity : MonoBehaviour
         if (invulnerableTime > 0)
             return;
         invulnerableTime = stats.invulnerabilityTime;
+        StartCoroutine(invulnerabily());
         StartCoroutine(hitBlink());
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
         if (stats.currentHealth <= 0)
@@ -77,12 +78,18 @@ public class Entity : MonoBehaviour
         {
             invulnerableTime -= 0.1f;
             yield return new WaitForSeconds(0.1f);
+            Debug.Log(invulnerableTime);
         }
+        Debug.Log("exit invulnerability");
     }
 
     IEnumerator hitBlink()
     {
         int blinks = 10;
+
+        if (this.gameObject == null)
+            yield break;
+
         Color col = new Color(sprite.color.r, sprite.color.g, sprite.color.b);
         for (int i = 0; i < blinks; i++)
         {

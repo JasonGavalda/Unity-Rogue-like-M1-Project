@@ -105,7 +105,8 @@ MonoBehaviour:
     maxHealth: 5
     strengh: 1
     intelligence: 10
-    size: 3
+    invulnerabilityTime: 1
+    size: 1.5
     speed: 4
     currentHealth: 5
   layers:
