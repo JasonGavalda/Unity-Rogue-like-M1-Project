@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class Entity : MonoBehaviour
@@ -15,6 +16,9 @@ public class Entity : MonoBehaviour
     protected bool isDead;
     [SerializeField]
     protected float cdDeath;
+
+    [SerializeField]
+    public Animator animator;
 
     protected Rigidbody2D rb;
     private SpriteRenderer sprite;
@@ -60,6 +64,8 @@ public class Entity : MonoBehaviour
             this.Die();
     }
 
+    public void Heal(int pHeal) { stats.currentHealth = Math.Min(stats.currentHealth + pHeal, stats.maxHealth); }
+
     public int getLayers()
     {
         return LayerMask.GetMask(layers);
@@ -83,5 +89,16 @@ public class Entity : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
             sprite.color = new Color(col.r, col.g, col.b, 1f);
         }
+
+    public void animateMove()
+    {
+        animator.SetFloat("Speed", Mathf.Max(Mathf.Abs(Input.GetAxis("Horizontal")), Mathf.Abs(Input.GetAxis("Vertical"))) *stats.speed);
+        
+    }
+
+    public void animateAttack()
+    {
+        animator.SetTrigger("Attack");
     }
 }
+ 

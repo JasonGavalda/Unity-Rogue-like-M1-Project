@@ -7,4 +7,5 @@ public class StatsModifier : MonoBehaviour
     private Stats stats;
 
     public void TakeDamage(int pDamage) { stats.currentHealth = stats.currentHealth - (pDamage / stats.armor); }
+    public void Heal(int pHeal) { stats.currentHealth = stats.currentHealth + pHeal; }
 }

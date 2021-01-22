@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2005674412059558857}
   - component: {fileID: 8574371750391164717}
   - component: {fileID: 212324532337930816}
-  - component: {fileID: 6652957884921661810}
-  - component: {fileID: 8632797490761740526}
+  - component: {fileID: 4256482233550251120}
+
   m_Layer: 8
   m_Name: cow
   m_TagString: Player
@@ -112,6 +112,7 @@ MonoBehaviour:
   - Player
   - Enemy
   cdDeath: 3
+  animator: {fileID: 0}
   basicAttack: {fileID: 212324532337930816}
   specialAttack: {fileID: 0}
 --- !u!50 &8574371750391164717
@@ -151,37 +152,25 @@ MonoBehaviour:
   cooldown: 0.5
   center: {fileID: 5301943384622357304}
   radius: 0.3
---- !u!114 &6652957884921661810
-MonoBehaviour:
+--- !u!95 &4256482233550251120
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1443812434269870907}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a634230476dc478b88eceac73b1c8a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  updateDistance: 10
-  target: {fileID: 0}
---- !u!70 &8632797490761740526
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443812434269870907}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.008380216, y: -0.06027752}
-  m_Size: {x: 0.17310257, y: 0.4057136}
-  m_Direction: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5301943384622357304
 GameObject:
   m_ObjectHideFlags: 0

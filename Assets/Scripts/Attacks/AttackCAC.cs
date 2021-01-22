@@ -9,27 +9,6 @@ public class AttackCAC : Attack
     public float radius;
     protected Collider2D[] colliders;
 
-
-    private int layersToCheck;
-
-    private Entity attackUser;
-    private int attackerStr;
-
-    private void Start()
-    {
-        attackUser = this.gameObject.GetComponent<Entity>();
-        if (attackUser == null)
-            attackUser = this.gameObject.GetComponentInParent<Entity>();
-        if (attackUser == null)
-        {
-            Debug.Log("no entity for attack");
-            return;
-        }
-
-        layersToCheck = attackUser.getLayers();
-        attackerStr = attackUser.getStrengh();
-    }
-
     protected override void useAttack()
     {
         //PLAY ANIM
@@ -37,11 +16,12 @@ public class AttackCAC : Attack
         colliders = Physics2D.OverlapCircleAll(center.transform.position,radius,layersToCheck);
         foreach (Collider2D entity in colliders)
         {
+            Debug.Log(entity.tag);
             if (entity.gameObject != this.gameObject)
             {
                 Entity ent = entity.gameObject.GetComponent<Entity>();
                 if(ent != null)
-                    ent.TakeDamage(damage + attackerStr);
+                    ent.TakeDamage(damage + attackUser.getStrengh());
             }
 
         }
