@@ -17,9 +17,12 @@ public class Entity : MonoBehaviour
     protected float cdDeath;
 
     protected Rigidbody2D rb;
+    private SpriteRenderer sprite;
+    private float invulnerableTime = 0;
 
     private void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         this.transform.localScale = new Vector3(stats.size, stats.size, stats.size);
         stats.currentHealth = stats.maxHealth;
@@ -48,7 +51,10 @@ public class Entity : MonoBehaviour
     public int getInt() { return stats.intelligence; }
 
     public void TakeDamage(int pDamage) {
-        Debug.Log(this.gameObject.tag + " took damage");
+        if (invulnerableTime > 0)
+            return;
+        invulnerableTime = stats.invulnerabilityTime;
+        StartCoroutine(hitBlink());
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
         if (stats.currentHealth <= 0)
             this.Die();
@@ -57,5 +63,25 @@ public class Entity : MonoBehaviour
     public int getLayers()
     {
         return LayerMask.GetMask(layers);
+    }
+
+    IEnumerator invulnerabily()
+    {
+        while(invulnerableTime > 0)
+        {
+            invulnerableTime -= 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    IEnumerator hitBlink()
+    {
+        Color col = sprite.color;
+        for(int i = 0; i < 5; i++)
+        {
+            sprite.color = new Color(col.r,col.g, col.b, 0.8f);
+            yield return new WaitForSeconds(0.15f);
+            sprite.color = new Color(col.r, col.g, col.b, 1f);
+        }
     }
 }
