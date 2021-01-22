@@ -89,9 +89,10 @@ public class Bear : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (path == null)
+        if (path == null || aTarget == null)
             return;
 
+       
         if (currentWayPoint >= path.vectorPath.Count)
         {
             EOP = true;

@@ -82,13 +82,17 @@ public class Entity : MonoBehaviour
 
     IEnumerator hitBlink()
     {
-        Color col = sprite.color;
-        for(int i = 0; i < 5; i++)
+        int blinks = 10;
+        Color col = new Color(sprite.color.r, sprite.color.g, sprite.color.b);
+        for (int i = 0; i < blinks; i++)
         {
-            sprite.color = new Color(col.r,col.g, col.b, 0.8f);
-            yield return new WaitForSeconds(0.15f);
-            sprite.color = new Color(col.r, col.g, col.b, 1f);
+            sprite.color = new Color(col.r + 0.1f, col.g, col.b, 0.7f);
+            yield return new WaitForSeconds(stats.invulnerabilityTime / (blinks * 2));
+            sprite.color = new Color(col.r, col.g, col.b, 0.9f);
+            yield return new WaitForSeconds(stats.invulnerabilityTime / (blinks * 2));
         }
+        sprite.color = col;
+    }
 
     public void animateMove()
     {
