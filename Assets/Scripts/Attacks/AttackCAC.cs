@@ -16,6 +16,7 @@ public class AttackCAC : Attack
         colliders = Physics2D.OverlapCircleAll(center.transform.position,radius,layersToCheck);
         foreach (Collider2D entity in colliders)
         {
+            Debug.Log(entity.tag);
             if (entity.gameObject != this.gameObject)
             {
                 Entity ent = entity.gameObject.GetComponent<Entity>();

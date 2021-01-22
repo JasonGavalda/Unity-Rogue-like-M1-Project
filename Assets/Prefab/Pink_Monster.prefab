@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4913918153930641777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4747532650827873598}
   m_Father: {fileID: 0}
@@ -105,10 +105,12 @@ MonoBehaviour:
     maxHealth: 5
     strengh: 1
     intelligence: 10
-    size: 1
+    size: 3
     speed: 4
     currentHealth: 5
-  layers: []
+  layers:
+  - Enemy
+  - Player
   cdDeath: 3
   animator: {fileID: 5181404819129212148}
   basicAttack: {fileID: 6579609244078315301}
@@ -219,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8404679712968592104}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.111, y: -0.035, z: 0}
+  m_LocalPosition: {x: 0.27, y: -0.035, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4898572997784592045}
