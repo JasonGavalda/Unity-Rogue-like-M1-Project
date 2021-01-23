@@ -9,18 +9,21 @@ public class Bear : Enemy
     public float forceX = 10f;
     public float forceY = 10f;
     public float nextWayPointDistance = 3f;
-
+    
 
     Path path;
     int currentWayPoint = 0;
     bool EOP = false;
     bool activatePath;
 
+    bool isPunching;
+
     Seeker seeker;
     public AttackCAC punch;
 
     void Start()
     {
+        isPunching = false;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -76,9 +79,13 @@ public class Bear : Enemy
     IEnumerator Punching()
     {
         rb.velocity = new Vector2(0,0);
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.3f);
         if (punch.tryAttack())
             animateAttack();
+        isPunching = true;
+        yield return new WaitForSeconds(0.65f);
+        isPunching = false;
+
     }
 
     // Update is called once per frame
@@ -106,11 +113,10 @@ public class Bear : Enemy
         }
         if (punch.canAttack())
             moveTowardPos((Vector2)path.vectorPath[currentWayPoint]);
-        else
+        else if(!isPunching)
         {
             Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
             moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));
-            Debug.Log(backwardDirection);
         }
 
         
