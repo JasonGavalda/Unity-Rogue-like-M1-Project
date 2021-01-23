@@ -11,12 +11,9 @@ public class AttackCAC : Attack
 
     protected override void useAttack()
     {
-        //PLAY ANIM
-        Debug.Log("AttackUsed");
         colliders = Physics2D.OverlapCircleAll(center.transform.position,radius,layersToCheck);
         foreach (Collider2D entity in colliders)
         {
-            Debug.Log(entity.tag);
             if (entity.gameObject != this.gameObject)
             {
                 Entity ent = entity.gameObject.GetComponent<Entity>();

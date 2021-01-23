@@ -24,13 +24,20 @@ public class Entity : MonoBehaviour
     private SpriteRenderer sprite;
     private float invulnerableTime = 0;
 
-    private void Start()
+    private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
+
+        if (sprite == null)
+        {
+            sprite = GetComponentInChildren<SpriteRenderer>();
+        }
+
         rb = GetComponent<Rigidbody2D>();
+
         this.transform.localScale = new Vector3(stats.size, stats.size, stats.size);
-        stats.currentHealth = stats.maxHealth;
         isDead = false;
+        stats.currentHealth = stats.maxHealth;
     }
 
     private void DestroyEntity()
@@ -57,10 +64,16 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int pDamage) {
         if (invulnerableTime > 0)
             return;
+        /*
+        Debug.Log("took damage : " + pDamage);
+        Debug.Log("reduce to : " + pDamage / stats.armor);
+        Debug.Log("hp going from: " + stats.currentHealth);
+        **/
         invulnerableTime = stats.invulnerabilityTime;
         StartCoroutine(invulnerabily());
         StartCoroutine(hitBlink());
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
+        //Debug.Log("to: " + stats.currentHealth);
         if (stats.currentHealth <= 0)
             this.Die();
     }
@@ -78,22 +91,21 @@ public class Entity : MonoBehaviour
         {
             invulnerableTime -= 0.1f;
             yield return new WaitForSeconds(0.1f);
-            Debug.Log(invulnerableTime);
         }
-        Debug.Log("exit invulnerability");
+
     }
 
     IEnumerator hitBlink()
     {
         int blinks = 10;
 
-        if (this.gameObject == null)
+        if (sprite == null)
             yield break;
 
         Color col = new Color(sprite.color.r, sprite.color.g, sprite.color.b);
         for (int i = 0; i < blinks; i++)
         {
-            sprite.color = new Color(col.r + 0.1f, col.g, col.b, 0.7f);
+            sprite.color = new Color(col.r + 0.2f, col.g, col.b, 0.6f);
             yield return new WaitForSeconds(stats.invulnerabilityTime / (blinks * 2));
             sprite.color = new Color(col.r, col.g, col.b, 0.9f);
             yield return new WaitForSeconds(stats.invulnerabilityTime / (blinks * 2));

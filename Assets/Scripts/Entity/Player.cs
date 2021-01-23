@@ -37,7 +37,6 @@ public class Player : Entity
         //animator.SetTrigger("specialAttack");
         if (pString == "basic")
         {
-            Debug.Log("paf");
             basicAttack.tryAttack();
             animateAttack();
         }
