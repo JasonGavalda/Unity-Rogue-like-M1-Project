@@ -41,11 +41,11 @@ GameObject:
   - component: {fileID: 909723943031744718}
   - component: {fileID: 909723943031744719}
   - component: {fileID: 909723943031744704}
-  - component: {fileID: 909723943031744705}
   - component: {fileID: 8923610130359252640}
   - component: {fileID: 5812748540784113048}
   - component: {fileID: 7831572491749445043}
   - component: {fileID: 2156614211357034795}
+  - component: {fileID: 8863275594805089154}
   m_Layer: 9
   m_Name: BrutoBear2_0
   m_TagString: Enemy
@@ -142,32 +142,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &909723943031744705
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909723943031744706}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.54}
-    newSize: {x: 0.5, y: 0.54}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.54}
-  m_EdgeRadius: 0
 --- !u!114 &8923610130359252640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,10 +183,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    armor: 1
-    maxHealth: 1
+    armor: 2
+    maxHealth: 5
     strengh: 1
     intelligence: 1
+    invulnerabilityTime: 0.5
     size: 1
     speed: 3
     currentHealth: 1
@@ -241,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  cooldown: 2
+  cooldown: 1.3
   center: {fileID: 260835623551826864}
   radius: 0.3
 --- !u!95 &2156614211357034795
@@ -263,6 +238,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &8863275594805089154
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909723943031744706}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.54}
+    newSize: {x: 0.5, y: 0.54}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.54}
+  m_EdgeRadius: 0
 --- !u!1 &4031668523112743542
 GameObject:
   m_ObjectHideFlags: 0
