@@ -183,8 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     armor: 2
-    maxHealth: 100
-    strengh: 2
+    maxHealth: 5
+    strengh: 1
     intelligence: 1
     invulnerabilityTime: 0.5
     size: 1
