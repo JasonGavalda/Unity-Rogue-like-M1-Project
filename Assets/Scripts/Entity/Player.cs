@@ -44,4 +44,10 @@ public class Player : Entity
         //else if (pString == "special")
             //specialAttack.tryAttack();
     }
+
+    override
+    public Vector2 getShootTarget()
+    {
+        return new Vector2(0, 0); // return mouse pos
+    }
 }

@@ -5,26 +5,17 @@ using UnityEngine;
 public class AttackDist : Attack
 {
     // Start is called before the first frame update
+    public GameObject projectile;
     public GameObject cannon;
     public float bulletSpeed;
 
     private Vector2 shootTarget;
-    private bool targetSet = false;
     
     protected override void useAttack()
     {
-        if (!targetSet)
-            Debug.Log("Target not set");
-        else
-        {
-            Instantiate(cannon);
-            cannon.GetComponent<Bullet>().launch(shootTarget, bulletSpeed, damage, attackUser.getInt(), layersToCheck);
-        }
-    }
-
-    private void setTarget(Vector2 pTarget)
-    {
-        shootTarget = pTarget;
-        targetSet = true;
+        shootTarget = attackUser.getShootTarget();
+        Vector2 directionTarget = new Vector2(shootTarget.x - this.transform.position.x, shootTarget.y - this.transform.position.y);
+        Instantiate(projectile, cannon.transform.position, cannon.transform.rotation);
+        projectile.GetComponent<Bullet>().launch(directionTarget.normalized, bulletSpeed, damage, attackUser.getInt(), layersToCheck);       
     }
 }

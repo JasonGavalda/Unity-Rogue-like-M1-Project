@@ -5,7 +5,7 @@ using UnityEngine;
 using System;
 
 
-public class Entity : MonoBehaviour
+public abstract class Entity : MonoBehaviour
 {
     [SerializeField]
     protected Stats stats;
@@ -154,5 +154,7 @@ public class Entity : MonoBehaviour
         if (stats.currentHealth / stats.maxHealth < 0.25f)
             healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = badColor;
     }
+
+    abstract public Vector2 getShootTarget();
 }
  
