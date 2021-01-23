@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using System;
 
@@ -19,6 +20,16 @@ public class Entity : MonoBehaviour
 
     [SerializeField]
     public Animator animator;
+
+    [SerializeField]
+    protected GameObject healthBar;
+    [SerializeField]
+    protected Color goodColor;
+    [SerializeField]
+    protected Color middleColor;
+    [SerializeField]
+    protected Color badColor;
+
 
     protected Rigidbody2D rb;
 
@@ -54,11 +65,15 @@ public class Entity : MonoBehaviour
     public void TakeDamage(int pDamage) {
         Debug.Log(this.gameObject.tag + " took damage");
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
+        UpdateHealth();
         if (stats.currentHealth <= 0)
             this.Die();
     }
 
-    public void Heal(int pHeal) { stats.currentHealth = Math.Min(stats.currentHealth + pHeal, stats.maxHealth); }
+    public void Heal(int pHeal) { 
+        stats.currentHealth = Math.Min(stats.currentHealth + pHeal, stats.maxHealth);
+        UpdateHealth();
+    }
 
     public int getLayers()
     {
@@ -74,6 +89,23 @@ public class Entity : MonoBehaviour
     public void animateAttack()
     {
         animator.SetTrigger("Attack");
+    }
+
+    public void UpdateHealth()
+    {
+        print(stats.currentHealth / stats.maxHealth);
+        healthBar.GetComponent<Scrollbar>().size = stats.currentHealth / stats.maxHealth;
+        SetColor();
+    }
+
+    void SetColor()
+    {
+        if (stats.currentHealth / stats.maxHealth >= 0.5f)
+            healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = goodColor;
+        if (stats.currentHealth / stats.maxHealth>= 0.25f && stats.currentHealth / stats.maxHealth < 0.5f)
+            healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = middleColor;
+        if (stats.currentHealth / stats.maxHealth < 0.25f)
+            healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = badColor;
     }
 }
  
