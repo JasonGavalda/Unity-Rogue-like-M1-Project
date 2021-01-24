@@ -15,6 +15,8 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     public void launch(Vector2 direction, float speed, int pDamage, int intelligence, int layerstocheck)
     {
+        if (rb == null)
+            rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = direction * speed;
         damage = pDamage + intelligence;
         layers = layerstocheck;
