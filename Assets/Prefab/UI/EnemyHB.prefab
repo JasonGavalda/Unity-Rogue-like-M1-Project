@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6824236721753355017}
   - component: {fileID: 3536410383081140668}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: EnemyHB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.019, y: 0.316}
+  m_AnchoredPosition: {x: -0.019012451, y: 0.31599426}
   m_SizeDelta: {x: 1.1537976, y: 0.12874174}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8031718360745011585
@@ -136,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643293877651388360, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.582088
+      value: 0.56823313
       objectReference: {fileID: 0}
     - target: {fileID: 3643293877651388360, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.y
@@ -172,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643293877651388360, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.554
+      value: 0.56093
       objectReference: {fileID: 0}
     - target: {fileID: 3643293877651388360, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -220,35 +220,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878032918485, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 11.018041
+      value: 0.27954483
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878032918485, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 59.0173
+      value: 0.08757427
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878032918485, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.4999347
+      value: 0.0013000071
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878032918485, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9.499
+      value: -0.00000020116568
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878870540380, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1.4504356
+      value: 0.588639
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878870540380, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.37328896
+      value: 0.0426891
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878870540380, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.72522
+      value: -0.0033
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878870540380, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000000074503
+      value: 0.00000022072
       objectReference: {fileID: 0}
     - target: {fileID: 3643293878870540383, guid: 32b200a5bb144584caf4fd5d892d5049, type: 3}
       propertyPath: m_Layer
