@@ -48,9 +48,17 @@ public class Bear : Enemy
             currentWayPoint++;
 
         if (force.x > 0)
+        {
             transform.localScale = new Vector3(-1f, 1f, 1f);
+            healthBar.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
         else
+        {
             transform.localScale = new Vector3(1f, 1f, 1f);
+            healthBar.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
     }
 
     void UpdatePath()
