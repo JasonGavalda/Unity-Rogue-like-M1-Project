@@ -6532,5 +6532,9 @@ PrefabInstance:
       propertyPath: m_UsedByEffector
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8110971070081100562, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
+      propertyPath: stats.maxHealth
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
