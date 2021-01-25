@@ -36,15 +36,11 @@ public class Bear : Enemy
         Vector2 direction = (pos - rb.position).normalized;
         Vector2 force;
 
-        force.x = direction.x * this.forceX * Time.deltaTime;
-        force.y = direction.y * this.forceY * Time.deltaTime;
+        force.x = direction.x * stats.speed;
+        force.y = direction.y * stats.speed * 1.5f;
 
-        if (rb.velocity.magnitude < stats.speed)
-        {
-            rb.AddForce(force);
-        }
-        else
-            rb.AddForce(new Vector2(-rb.velocity.x * Time.deltaTime * this.forceX, -rb.velocity.y * this.forceY * Time.deltaTime));
+        rb.AddForce(force);
+
 
         float distance = Vector2.Distance(rb.position, pos);
 

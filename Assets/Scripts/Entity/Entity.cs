@@ -38,7 +38,7 @@ public abstract class Entity : MonoBehaviour
     private void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
-
+        
         if (sprite == null)
         {
             sprite = GetComponentInChildren<SpriteRenderer>();
@@ -140,6 +140,9 @@ public abstract class Entity : MonoBehaviour
 
     public void UpdateHealth()
     {
+        if (healthBar == null)
+            return;
+
         print(stats.currentHealth / stats.maxHealth);
         healthBar.GetComponent<Scrollbar>().size = stats.currentHealth / stats.maxHealth;
         SetColor();
@@ -147,6 +150,8 @@ public abstract class Entity : MonoBehaviour
 
     void SetColor()
     {
+        if (healthBar == null)
+            return;
         if (stats.currentHealth / stats.maxHealth >= 0.5f)
             healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = goodColor;
         if (stats.currentHealth / stats.maxHealth>= 0.25f && stats.currentHealth / stats.maxHealth < 0.5f)

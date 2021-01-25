@@ -16,57 +16,37 @@ public class Bullet : MonoBehaviour
     private Vector2 vel;
     public string obstacleLayer;
 
-    void Start()
+    // Update is called once per frame
+    public void launch(Vector2 direction, float speed, int pDamage, int intelligence, int layerstocheck)
     {
         timeLived = 0f;
         box = this.gameObject.GetComponent<BoxCollider2D>();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
-        //layers += LayerMask.NameToLayer(obstacleLayer);
-    }
+        vel.x =  direction.x * speed;
+        vel.y =  direction.y * speed;
 
-    // Update is called once per frame
-    public void launch(Vector2 direction, float speed, int pDamage, int intelligence, int layerstocheck)
-    {
-        if (rb == null)
-        {
-            Debug.Log("rb null");
-            rb = this.GetComponent<Rigidbody2D>();
-        }
-        vel.x = 1; // direction.x * speed;
-        vel.y = 0; // direction.y * speed;
-        Debug.Log(vel);
         damage = pDamage + intelligence;
         layers = layerstocheck;
+        layers += LayerMask.NameToLayer(obstacleLayer);
+        rb.velocity = vel;
         Debug.Log("Launched");
     }
 
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         colliders = Physics2D.OverlapCircleAll(this.gameObject.transform.position, explosionRadius, layers);
         foreach (Collider2D entity in colliders)
         {
-            Debug.Log("boum");
             Entity ent = entity.gameObject.GetComponent<Entity>();
             if (ent != null) {
                 ent.TakeDamage(damage);
                 Destroy(this.gameObject);
             }
-
         }
-        Debug.Log("test");
     }
-    */
 
     private void Update()
     {
-        if (rb.velocity.magnitude < vel.magnitude)
-        {
-            Debug.Log("inferiorspeed");
-            rb.velocity = vel;
-        }
-        Debug.Log(vel);
-
         timeLived += Time.deltaTime;
         if(timeLived > lifeTime)
         {

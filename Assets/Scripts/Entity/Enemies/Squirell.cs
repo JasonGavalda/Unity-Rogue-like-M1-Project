@@ -30,11 +30,16 @@ public class Squirell : Enemy
 
 
         Vector2 distance = new Vector2(aTarget.transform.position.x - this.transform.position.x, aTarget.transform.position.y - this.transform.position.y);
-        
-        if(distance.magnitude < distanceMax)
+
+        if (distance.magnitude < distanceMax)
         {
-            this.rb.velocity = new Vector2(-distance.normalized.x * stats.speed * Time.deltaTime, -distance.normalized.y * stats.speed * Time.deltaTime);
+            Vector2 backwardRun = new Vector2(-distance.normalized.x * stats.speed, -distance.normalized.y * stats.speed);
+            this.rb.AddForce(backwardRun);
+            //this.rb.velocity = backwardRun;
         }
+        else
+            this.rb.AddForce(-stats.speed * rb.velocity);
+            //this.rb.velocity = new Vector2(0,0);
 
     }
 
