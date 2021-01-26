@@ -93,8 +93,8 @@ GameObject:
   - component: {fileID: 4089050939175676716}
   - component: {fileID: 8110971070081100562}
   - component: {fileID: 324220393962032942}
-  - component: {fileID: 7650908158551411732}
   - component: {fileID: 6455270366135421546}
+  - component: {fileID: 7861649704526353888}
   m_Layer: 9
   m_Name: Squirell
   m_TagString: Untagged
@@ -139,7 +139,7 @@ MonoBehaviour:
     intelligence: 1
     invulnerabilityTime: 1
     size: 1
-    speed: 4
+    speed: 12
     currentHealth: 1
   layers:
   - Player
@@ -149,7 +149,7 @@ MonoBehaviour:
   goodColor: {r: 0.002629757, g: 1, b: 0, a: 1}
   middleColor: {r: 1, g: 0.74660194, b: 0, a: 1}
   badColor: {r: 1, g: 0, b: 0, a: 1}
-  distanceMax: 4
+  distanceMax: 3.8
   animationTime: 1
   shoot: {fileID: 6455270366135421546}
 --- !u!50 &324220393962032942
@@ -164,8 +164,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 18
+  m_Mass: 1.5
+  m_LinearDrag: 0.2
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -173,32 +173,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &7650908158551411732
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4716803078077546266}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.01078859, y: 0.0038292408}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.26350027, y: 0.39581108}
-  m_EdgeRadius: 0
 --- !u!114 &6455270366135421546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +190,22 @@ MonoBehaviour:
   projectile: {fileID: 6689268562882726967, guid: 416a8bf27e7757349b13759cfc6b8828, type: 3}
   cannon: {fileID: 4814588248391376221}
   bulletSpeed: 5
+--- !u!58 &7861649704526353888
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716803078077546266}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0038889647, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.17461002
 --- !u!1 &4814588248391376221
 GameObject:
   m_ObjectHideFlags: 0

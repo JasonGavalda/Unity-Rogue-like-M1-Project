@@ -93,7 +93,7 @@ public class Bear : Enemy
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (path == null || aTarget == null)
             return;
