@@ -33,16 +33,11 @@ public class Player : Entity
 
     void Attack(string pString)
     {
-        //animator.SetTrigger("basicAttack");
-        //animator.SetTrigger("specialAttack");
         if (pString == "basic")
         {
             basicAttack.tryAttack();
             animateAttack();
         }
-
-        //else if (pString == "special")
-            //specialAttack.tryAttack();
     }
 
     override
