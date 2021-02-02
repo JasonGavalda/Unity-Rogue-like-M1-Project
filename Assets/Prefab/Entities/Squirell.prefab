@@ -305,6 +305,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4089050939175676716}
     m_Modifications:
+    - target: {fileID: 2171668501242489906, guid: 9e4a5f193ef01a7419554195acaf95c7, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1991966509
+      objectReference: {fileID: 0}
     - target: {fileID: 5334939645174626833, guid: 9e4a5f193ef01a7419554195acaf95c7, type: 3}
       propertyPath: m_Name
       value: EnemyHB
