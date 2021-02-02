@@ -10,7 +10,6 @@ public struct Stats
     public int strengh;
     public int intelligence;
 
-    public float invulnerabilityTime;
     public float size;
     public float speed;
     public float currentHealth;

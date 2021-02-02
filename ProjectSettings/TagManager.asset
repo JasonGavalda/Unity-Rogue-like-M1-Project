@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -18,7 +17,7 @@ TagManager:
   - Player
   - Enemy
   - Obstacle
-  - Object
+  - 
   - 
   - 
   - 
@@ -54,7 +53,4 @@ TagManager:
     locked: 0
   - name: Forground
     uniqueID: 1991966509
-    locked: 0
-  - name: UI
-    uniqueID: 275634249
     locked: 0

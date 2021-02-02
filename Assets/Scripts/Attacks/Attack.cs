@@ -8,35 +8,16 @@ public abstract class Attack : MonoBehaviour
 
     public float cooldown;
     float nextAttackTime = 0f;
-    protected int layersToCheck;
 
-    protected Entity attackUser;
-
-    private void Start()
-    {
-        attackUser = this.gameObject.GetComponent<Entity>();
-        if (attackUser == null)
-            attackUser = this.gameObject.GetComponentInParent<Entity>();
-        if (attackUser == null)
-        {
-            Debug.Log("no entity for attack");
-            return;
-        }
-
-        layersToCheck = attackUser.getLayers();
-    }
-
-    public bool tryAttack()
+    public void tryAttack()
     {
         if (nextAttackTime <= 0f)
         {
             nextAttackTime = cooldown;
             useAttack();
-            return true;
         }
         else
             Debug.Log("attack on cd");
-        return false;
     }
 
     public bool canAttack()
@@ -51,6 +32,4 @@ public abstract class Attack : MonoBehaviour
     }
 
     abstract protected void useAttack();
-
-
 }

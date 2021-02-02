@@ -29,10 +29,4 @@ public abstract class Enemy : Entity
             }
         }      
     }
-
-    override
-    public Vector2 getShootTarget()
-    {
-        return aTarget.transform.position; // return mouse pos
-    }
 }

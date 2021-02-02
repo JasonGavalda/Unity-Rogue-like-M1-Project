@@ -9,38 +9,45 @@ public class Bear : Enemy
     public float forceX = 10f;
     public float forceY = 10f;
     public float nextWayPointDistance = 3f;
-    
 
     Path path;
     int currentWayPoint = 0;
     bool EOP = false;
     bool activatePath;
 
-    bool isPunching;
-
     Seeker seeker;
     public AttackCAC punch;
 
+    public Animator animator;
+
     void Start()
     {
-        isPunching = false;
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
-        InvokeRepeating("animateMove", 0f, 0.5f);
+
     }
 
     void moveTowardPos(Vector2 pos)
     {
         Vector2 direction = (pos - rb.position).normalized;
         Vector2 force;
+        int comp = 1;
 
-        force.x = direction.x * stats.speed;
-        force.y = direction.y * stats.speed * 1.5f;
+        if (rb.velocity.magnitude <= stats.speed)
+        {
+            force.x = direction.x * this.forceX * Time.deltaTime;
+            force.y = direction.y * this.forceY * Time.deltaTime;
+        }
+        else
+        {
+            force.x = -rb.velocity.x * this.forceX * Time.deltaTime;
+            force.y = -rb.velocity.y * this.forceY * Time.deltaTime;
+            comp = -1;
+        }
 
         rb.AddForce(force);
-
 
         float distance = Vector2.Distance(rb.position, pos);
 
@@ -48,17 +55,9 @@ public class Bear : Enemy
             currentWayPoint++;
 
         if (force.x > 0)
-        {
-            transform.localScale = new Vector3(-1f, 1f, 1f);
-            healthBar.transform.localScale = new Vector3(-1f, 1f, 1f);
-        }
-
+            transform.localScale = new Vector3(comp * -1f, 1f, 1f);
         else
-        {
-            transform.localScale = new Vector3(1f, 1f, 1f);
-            healthBar.transform.localScale = new Vector3(1f, 1f, 1f);
-        }
-
+            transform.localScale = new Vector3(comp * 1f, 1f, 1f);
     }
 
     void UpdatePath()
@@ -83,22 +82,16 @@ public class Bear : Enemy
     IEnumerator Punching()
     {
         rb.velocity = new Vector2(0,0);
-        yield return new WaitForSeconds(0.3f);
-        if (punch.tryAttack())
-            animateAttack();
-        isPunching = true;
-        yield return new WaitForSeconds(0.65f);
-        isPunching = false;
-
+        yield return new WaitForSeconds(0.4f);
+        punch.tryAttack();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if (path == null || aTarget == null)
+        if (path == null)
             return;
 
-       
         if (currentWayPoint >= path.vectorPath.Count)
         {
             EOP = true;
@@ -117,13 +110,13 @@ public class Bear : Enemy
         }
         if (punch.canAttack())
             moveTowardPos((Vector2)path.vectorPath[currentWayPoint]);
-        else if(!isPunching)
-        {
-            Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
-            moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));
-        }
+        else
+            moveTowardPos(new Vector2(this.transform.position.x- aTarget.transform.position.x, aTarget.transform.position.y));
 
-        
+        if (distanceWithTarget <= punch.radius && punch.canAttack())
+            animator.SetBool("Space", true);
+        else
+            animator.SetBool("Space", false);
     }
 }
 

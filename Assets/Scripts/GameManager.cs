@@ -5,34 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private List<GameObject> enemies;
-    private int numberEnemiesInit;
-    private int numberDeadEnemies;
     // Start is called before the first frame update
     void Start()
     {
-        enemies = new List<GameObject>();
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){ 
-           enemies.Add(enemy);
-           numberEnemiesInit++;
+            this.enemies.Add(enemy);
         }
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        numberDeadEnemies = 0;
-        foreach (GameObject enemy in enemies)
-        {
-            if (enemy == null)
-            {
-                //this.enemies.Remove(enemy);
-                numberDeadEnemies++;
-            }
+       foreach (GameObject enemy in enemies) {
+            if (enemy.GetComponent<Entity>().getIsDead())
+                this.enemies.Remove(enemy);
         }
-        if ((numberEnemiesInit - numberDeadEnemies) == 0)
-        {
-            print("You Win");
-        }
+       if (this.enemies.Count == 0)
+            print("you win");
     }
 }
