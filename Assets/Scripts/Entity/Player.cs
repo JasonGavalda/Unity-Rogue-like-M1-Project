@@ -41,13 +41,14 @@ public class Player : Entity
             animateAttack();
         }
 
-        //else if (pString == "special")
-            //specialAttack.tryAttack();
+        else if (pString == "special")
+            specialAttack.tryAttack();
     }
 
     override
     public Vector2 getShootTarget()
     {
-        return new Vector2(0, 0); // return mouse pos
+        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        return pos;// return mouse pos
     }
 }

@@ -27,7 +27,7 @@ public class Bullet : MonoBehaviour
 
         damage = pDamage + intelligence;
         layers = layerstocheck;
-        layers += LayerMask.NameToLayer(obstacleLayer);
+        //layers += LayerMask.NameToLayer(obstacleLayer);
         rb.velocity = vel;
         Debug.Log("Launched");
     }
