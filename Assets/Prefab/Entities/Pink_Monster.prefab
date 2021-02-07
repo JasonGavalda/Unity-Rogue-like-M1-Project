@@ -143,7 +143,7 @@ MonoBehaviour:
     currentHealth: 5
   layers:
   - Enemy
-  - Player
+  - 
   cdDeath: 3
   animator: {fileID: 5181404819129212148}
   healthBar: {fileID: 0}

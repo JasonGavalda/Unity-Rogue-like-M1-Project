@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Bullet : MonoBehaviour
 {
@@ -27,20 +28,28 @@ public class Bullet : MonoBehaviour
 
         damage = pDamage + intelligence;
         layers = layerstocheck;
-        layers += LayerMask.NameToLayer(obstacleLayer);
+        layers += (int)Math.Pow(2,LayerMask.NameToLayer(obstacleLayer));
         rb.velocity = vel;
         Debug.Log("Launched");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+      
         colliders = Physics2D.OverlapCircleAll(this.gameObject.transform.position, explosionRadius, layers);
-        foreach (Collider2D entity in colliders)
+        foreach (Collider2D collider in colliders)
         {
-            Entity ent = entity.gameObject.GetComponent<Entity>();
-            if (ent != null) {
+            Debug.Log("ForEach");
+            Entity ent = collider.gameObject.GetComponent<Entity>();
+            if (ent != null)
+            {
                 ent.TakeDamage(damage);
                 Destroy(this.gameObject);
+            }
+            else if (collider.gameObject.layer == LayerMask.NameToLayer(obstacleLayer))
+            {
+                Destroy(this.gameObject);
+                Debug.Log("AIEAIE");
             }
         }
     }
