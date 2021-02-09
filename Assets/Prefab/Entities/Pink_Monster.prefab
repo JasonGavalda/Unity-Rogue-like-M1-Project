@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4732804773425113173}
+  - component: {fileID: 6534467038860880099}
   m_Layer: 8
   m_Name: Canon
   m_TagString: Untagged
@@ -30,6 +31,27 @@ Transform:
   m_Father: {fileID: 4898572997784592045}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &6534467038860880099
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4801810649716752721}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &4913918153930641777
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +273,7 @@ MonoBehaviour:
   projectile: {fileID: 6689268562882726967, guid: 416a8bf27e7757349b13759cfc6b8828, type: 3}
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
+  rb: {fileID: 6534467038860880099}
 --- !u!1 &8404679712968592104
 GameObject:
   m_ObjectHideFlags: 0

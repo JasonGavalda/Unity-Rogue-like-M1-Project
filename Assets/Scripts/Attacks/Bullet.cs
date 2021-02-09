@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
         timeLived = 0f;
         box = this.gameObject.GetComponent<BoxCollider2D>();
         rb = this.gameObject.GetComponent<Rigidbody2D>();
+        rb.rotation = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         vel.x =  direction.x * speed;
         vel.y =  direction.y * speed;
 
@@ -39,7 +40,6 @@ public class Bullet : MonoBehaviour
         colliders = Physics2D.OverlapCircleAll(this.gameObject.transform.position, explosionRadius, layers);
         foreach (Collider2D collider in colliders)
         {
-            Debug.Log("ForEach");
             Entity ent = collider.gameObject.GetComponent<Entity>();
             if (ent != null)
             {
@@ -49,7 +49,6 @@ public class Bullet : MonoBehaviour
             else if (collider.gameObject.layer == LayerMask.NameToLayer(obstacleLayer))
             {
                 Destroy(this.gameObject);
-                Debug.Log("AIEAIE");
             }
         }
     }

@@ -16,6 +16,6 @@ public class AttackDist : Attack
         shootTarget = attackUser.getShootTarget();
         Vector2 directionTarget = new Vector2(shootTarget.x - this.transform.position.x, shootTarget.y - this.transform.position.y);
         GameObject bullet = Instantiate(projectile, cannon.transform.position, cannon.transform.rotation);
-        bullet.GetComponent<Bullet>().launch(directionTarget.normalized, bulletSpeed, damage, attackUser.getInt(), layersToCheck);       
+        bullet.GetComponent<Bullet>().launch(directionTarget.normalized, bulletSpeed, damage, attackUser.getInt(), layersToCheck);
     }
 }
