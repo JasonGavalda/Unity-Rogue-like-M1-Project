@@ -56,7 +56,7 @@ public class RoomSpawner : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other) // Appelée à chaque fois que le point de spawn entre en collision.
     {
         if (other.CompareTag("SpawnPoint"))
         {

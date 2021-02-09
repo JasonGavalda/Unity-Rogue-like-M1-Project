@@ -16,7 +16,7 @@ public class RoomTemplates : MonoBehaviour
 
     public float waitTime; // Temps d'attente pour faire spawner le boss
     private bool spawnedBoss;
-    public GameObject boss;
+    // public GameObject boss;
 
     // Update is called once per frame
     void Update()
@@ -27,7 +27,7 @@ public class RoomTemplates : MonoBehaviour
             {
                 if(i == rooms.Count-1)
                 {
-                    Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                    // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                     spawnedBoss = true;
                 }
             }
