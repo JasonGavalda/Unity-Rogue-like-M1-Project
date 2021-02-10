@@ -42,7 +42,10 @@ public class Player : Entity
         }
 
         else if (pString == "special")
-            specialAttack.tryAttack();
+        {
+            //specialAttack.tryAttack();
+            animateSpecialAttack();
+        }
     }
 
     override
