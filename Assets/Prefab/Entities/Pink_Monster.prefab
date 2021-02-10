@@ -248,7 +248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   cooldown: 0
-  projectile: {fileID: 6689268562882726967, guid: 416a8bf27e7757349b13759cfc6b8828, type: 3}
+  projectile: {fileID: 7304506156458376552, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
 --- !u!1 &8404679712968592104
