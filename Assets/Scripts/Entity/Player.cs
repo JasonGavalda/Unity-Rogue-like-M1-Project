@@ -44,7 +44,7 @@ public class Player : Entity
         else if (pString == "special")
         {
             //specialAttack.tryAttack();
-            animateSpecialAttack();
+            animateSpecialAttack(); // L'animation se charge de lancer l'attaque au bon moment
         }
     }
 
