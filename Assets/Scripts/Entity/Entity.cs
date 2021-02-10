@@ -138,6 +138,11 @@ public abstract class Entity : MonoBehaviour
         animator.SetTrigger("Attack");
     }
 
+    public void animateSpecialAttack()
+    {
+        animator.SetTrigger("SpecialAttack");
+    }
+
     public void UpdateHealth()
     {
         if (healthBar == null)

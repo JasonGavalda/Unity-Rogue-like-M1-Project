@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4636843341259239464}
   - component: {fileID: 8530386986088453408}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Closed Room
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1187,6 +1187,6 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
-  m_Mode: 1
+  m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0

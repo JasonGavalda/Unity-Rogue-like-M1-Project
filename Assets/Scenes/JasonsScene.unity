@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rooms
       objectReference: {fileID: 0}
+    - target: {fileID: 5880548242372817864, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7756330530317649677, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
       propertyPath: openingDirection
       value: 4
@@ -269,7 +273,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 100
+  orthographic size: 50
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -310,7 +314,7 @@ GameObject:
   - component: {fileID: 1894392382}
   - component: {fileID: 1894392381}
   m_Layer: 0
-  m_Name: Room Templates
+  m_Name: RoomTemplates
   m_TagString: Rooms
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,6 +336,7 @@ MonoBehaviour:
   - {fileID: 7744321316197888818, guid: d880512692a3206428af0fa01bf18fbc, type: 3}
   - {fileID: 248572626304178169, guid: 0820da53f6b7a7b4b909d2aa73bbd27d, type: 3}
   - {fileID: 4465431794527881207, guid: e31619274b4b37744bc6de96255ddac9, type: 3}
+  - {fileID: 3227714328904258158, guid: c411bc926cb86d84393f5136b33a06ef, type: 3}
   topRooms:
   - {fileID: 2882867542751780789, guid: c65563485eb00f34b97d9674990e5f9e, type: 3}
   - {fileID: 4465431794527881207, guid: e31619274b4b37744bc6de96255ddac9, type: 3}
@@ -341,12 +346,13 @@ MonoBehaviour:
   - {fileID: 3090416325122831568, guid: 0c2b05551d036c84fbc1ef57378f348d, type: 3}
   - {fileID: 8444997075497162795, guid: 30fc65d5072812d47b1e88969c652044, type: 3}
   - {fileID: 2175479985702737015, guid: 8fe9fbbac29945e4aaff24fa60750ddc, type: 3}
+  - {fileID: 3227714328904258158, guid: c411bc926cb86d84393f5136b33a06ef, type: 3}
   rightRooms:
   - {fileID: 8444997075497162795, guid: 30fc65d5072812d47b1e88969c652044, type: 3}
   - {fileID: 7693094324920123632, guid: 0b9ef458a826a424a93fcdea88a456a9, type: 3}
   - {fileID: 248572626304178169, guid: 0820da53f6b7a7b4b909d2aa73bbd27d, type: 3}
   - {fileID: 374968415657693928, guid: 1e4980975056da241b5700880699c7c8, type: 3}
-  closedRoom: {fileID: 4623103525639451028, guid: 2212502720f58a44e81f5e80cf98d3a7, type: 3}
+  closedRoom: {fileID: 1408009332105688161, guid: 12c7380999e37ea4da87c936f5df5df1, type: 3}
   rooms: []
   waitTime: 2
 --- !u!4 &1894392382
