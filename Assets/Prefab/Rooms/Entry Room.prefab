@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1268972156710087856}
   - component: {fileID: 3928705656046461194}
   m_Layer: 0
-  m_Name: spawn Point (4)
+  m_Name: RoomSpawnerE2
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 1
+  openingDirection: 2
   spawned: 0
   waitTime: 4
 --- !u!61 &1268972156710087856
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8697963495125397686}
   - component: {fileID: 5116111814612714196}
   m_Layer: 0
-  m_Name: spawn Point (3)
+  m_Name: RoomSpawnerE4
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 3
+  openingDirection: 4
   spawned: 0
   waitTime: 4
 --- !u!61 &8697963495125397686
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 5880548241713034321}
   - component: {fileID: 5880548241713034320}
   m_Layer: 0
-  m_Name: spawn Point(5)
+  m_Name: RoomSpawnerE1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 2
+  openingDirection: 1
   spawned: 0
   waitTime: 4
 --- !u!61 &5880548241713034321
@@ -1598,7 +1598,7 @@ GameObject:
   - component: {fileID: 4283806457212393049}
   - component: {fileID: 3359023972511329402}
   m_Layer: 0
-  m_Name: spawn Point (2)
+  m_Name: RoomSpawnerE3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1630,7 +1630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 4
+  openingDirection: 3
   spawned: 0
   waitTime: 4
 --- !u!61 &4283806457212393049

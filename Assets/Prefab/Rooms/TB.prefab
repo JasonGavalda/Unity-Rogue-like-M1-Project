@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1662266536922388589}
   - component: {fileID: 1834839620065446373}
   m_Layer: 0
-  m_Name: spawn Point
+  m_Name: RoomSpawnerTB1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 2
+  openingDirection: 1
   spawned: 0
   waitTime: 4
 --- !u!61 &1662266536922388589
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 555516480056749855}
   - component: {fileID: 6364246640048375595}
   m_Layer: 0
-  m_Name: spawn Point
+  m_Name: RoomSpwanerTB2
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 1
+  openingDirection: 2
   spawned: 0
   waitTime: 4
 --- !u!61 &555516480056749855
