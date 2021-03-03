@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 3
+  openingDirection: 4
   spawned: 0
   waitTime: 4
 --- !u!61 &8637049552593279774
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b08931d05dcdfa44a65c0d7e98546c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openingDirection: 4
+  openingDirection: 3
   spawned: 0
   waitTime: 4
 --- !u!61 &853810481419657140

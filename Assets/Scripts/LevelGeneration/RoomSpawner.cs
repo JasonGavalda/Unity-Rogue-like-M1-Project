@@ -43,13 +43,13 @@ public class RoomSpawner : MonoBehaviour
             else if (openingDirection == 3)
             {
                 // On créé une Room avec une porte Ouest.
-                rand = Random.Range(0, templates.bottomRooms.Length);
+                rand = Random.Range(0, templates.leftRooms.Length);
                 Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
             }
             else if (openingDirection == 4)
             {
                 // On créé une Room avec une porte Est.
-                rand = Random.Range(0, templates.bottomRooms.Length);
+                rand = Random.Range(0, templates.rightRooms.Length);
                 Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
             spawned = true;
