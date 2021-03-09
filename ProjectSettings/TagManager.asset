@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - SpawnPoint
   - Rooms
+  - EnemyPoint
   layers:
   - Default
   - TransparentFX
