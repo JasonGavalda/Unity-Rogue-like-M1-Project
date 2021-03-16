@@ -60,12 +60,28 @@ public class RoomSpawner : MonoBehaviour
     {
         if (other.CompareTag("SpawnPoint"))
         {
-            if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
+            try
             {
-                Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
+                {
+                    try
+                    {
+                        //Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
+                        Destroy(gameObject);
+                    }
+                    catch (System.NullReferenceException e)
+                    {
+                        other.GetComponent<RoomSpawner>().spawned = false;
+                        Destroy(gameObject);
+                    }
+                }
+                spawned = true;
             }
-            spawned = true;
+            catch (System.NullReferenceException e)
+            { 
+                            
+            }
+            
         }
     }
 }

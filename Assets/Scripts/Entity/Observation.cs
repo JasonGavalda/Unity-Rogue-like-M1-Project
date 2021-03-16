@@ -12,6 +12,8 @@ public class Observation : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Ceci entre en collision : " + this.gameObject);
+        Debug.Log("Collision avec : " + collision);
         parentEnemy.foundTarget(collision);
     }
 }
