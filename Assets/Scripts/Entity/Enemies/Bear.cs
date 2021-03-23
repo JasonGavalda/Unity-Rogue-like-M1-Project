@@ -6,8 +6,8 @@ using Pathfinding;
 
 public class Bear : Enemy
 {
-    public float forceX = 10f;
-    public float forceY = 10f;
+    public float forceX ;
+    public float forceY ;
     public float nextWayPointDistance = 3f;
     
 
@@ -36,8 +36,8 @@ public class Bear : Enemy
         Vector2 direction = (pos - rb.position).normalized;
         Vector2 force;
 
-        force.x = direction.x * stats.speed;
-        force.y = direction.y * stats.speed * 1.5f;
+        force.x = direction.x * stats.speed * forceX;
+        force.y = direction.y * stats.speed * forceY;
 
         rb.AddForce(force);
 

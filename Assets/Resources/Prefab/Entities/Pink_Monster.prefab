@@ -140,7 +140,7 @@ MonoBehaviour:
     intelligence: 1
     invulnerabilityTime: 1
     size: 1.5
-    speed: 4
+    speed: 2
     currentHealth: 5
   layers:
   - Enemy
