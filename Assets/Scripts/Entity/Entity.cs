@@ -165,6 +165,20 @@ public abstract class Entity : MonoBehaviour
             healthBar.transform.Find("Mask").Find("Image").GetComponent<Image>().color = badColor;
     }
 
+    //------------------ For the Boss -------------------------------
+    protected bool setState()
+    {
+        if (stats.currentHealth / stats.maxHealth <= 0.9f)
+            return true;
+        return false;
+    }
+    //---------------------------------------------------------------
+
     abstract public Vector2 getShootTarget();
+
+    public Rigidbody2D getRigidBody()
+    {
+        return rb;
+    }
 }
  
