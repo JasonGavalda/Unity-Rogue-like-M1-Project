@@ -4175,7 +4175,7 @@ GameObject:
   - component: {fileID: 850804008}
   - component: {fileID: 850804007}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4641,6 +4641,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1003224085517812125, guid: 423f3a8248691f748a87a9ec01d544f0, type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4898572997784592045, guid: 423f3a8248691f748a87a9ec01d544f0, type: 3}
       propertyPath: m_RootOrder
       value: 11

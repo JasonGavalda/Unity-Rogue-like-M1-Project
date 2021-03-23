@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7178978510913501829}
   - component: {fileID: 5181404819129212148}
   - component: {fileID: 4495550340668017272}
+  - component: {fileID: 1003224085517812125}
   m_Layer: 8
   m_Name: Pink_Monster
   m_TagString: Player
@@ -251,6 +252,28 @@ MonoBehaviour:
   projectile: {fileID: 7304506156458376552, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
+--- !u!114 &1003224085517812125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913918153930641777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  observableSearch: 2
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents: []
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &8404679712968592104
 GameObject:
   m_ObjectHideFlags: 0
