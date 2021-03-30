@@ -12,6 +12,8 @@ public class RoomTemplates : MonoBehaviour
 
     public List<GameObject> rooms;
 
+    public GameObject closedRoom;
+
     public float waitTime; // Temps d'attente pour faire spawner le boss
     private bool spawnedBoss;
     // public GameObject boss;

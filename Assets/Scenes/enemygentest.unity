@@ -335,6 +335,10 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[69].second.m_TileSpriteIndex
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 5783459788314636429, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: isInstantiated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5880548241876350249, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
       propertyPath: m_RootOrder
       value: 4
