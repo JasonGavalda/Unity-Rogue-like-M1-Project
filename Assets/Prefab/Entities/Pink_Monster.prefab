@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 7178978510913501829}
   - component: {fileID: 5181404819129212148}
   - component: {fileID: 4495550340668017272}
+  - component: {fileID: 189821626186756458}
   m_Layer: 8
   m_Name: Pink_Monster
   m_TagString: Player
@@ -150,7 +151,7 @@ MonoBehaviour:
   goodColor: {r: 0, g: 0, b: 0, a: 0}
   middleColor: {r: 0, g: 0, b: 0, a: 0}
   badColor: {r: 0, g: 0, b: 0, a: 0}
-  basicAttack: {fileID: 6579609244078315301}
+  basicAttack: {fileID: 189821626186756458}
   specialAttack: {fileID: 4495550340668017272}
 --- !u!114 &6579609244078315301
 MonoBehaviour:
@@ -159,7 +160,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4913918153930641777}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48018796c4dd5954fac07d4b089d1114, type: 3}
   m_Name: 
@@ -251,6 +252,20 @@ MonoBehaviour:
   projectile: {fileID: 7304506156458376552, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
+--- !u!114 &189821626186756458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913918153930641777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46820aee723b0ef4da8e53bdf75b238e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  cooldown: 0
 --- !u!1 &8404679712968592104
 GameObject:
   m_ObjectHideFlags: 0
