@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2348625850388254128}
   - component: {fileID: 6281533017556153318}
   - component: {fileID: 264832180193758782}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoomSpawnerBLTR4
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6233786707384782118}
   - component: {fileID: 5802657472834184896}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemySpawner (2)
   m_TagString: EnemyPoint
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -151,7 +151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6440923909011559905}
   - component: {fileID: 8318148441644148542}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemySpawner (3)
   m_TagString: EnemyPoint
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 6314613798392661371}
   - component: {fileID: 166210480591536576}
   - component: {fileID: 7665377133042360713}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoomSpawnerBLTR2
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -292,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5877516708484809413}
   - component: {fileID: 6657185126017903382}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemySpawner (1)
   m_TagString: EnemyPoint
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 3514936669098916844}
   - component: {fileID: 1945961923279014685}
   - component: {fileID: 8521475287862136109}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -799,7 +799,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2847797994442717312}
   - component: {fileID: 7581249015886528824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: EnemySpawner
   m_TagString: EnemyPoint
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 4173322828065056473}
   - component: {fileID: 4618747928718249248}
   - component: {fileID: 8299293491729370535}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoomSpawnerBLTR3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 6720835449598816609}
   - component: {fileID: 4833720524087179499}
   - component: {fileID: 2053966003031902685}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1872,7 +1872,7 @@ GameObject:
   - component: {fileID: 1006643370966662691}
   - component: {fileID: 7949290763417545201}
   - component: {fileID: 5114609437965785589}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RoomSpawnerBLTR1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 5099740957728886777}
   - component: {fileID: 8562310889818833715}
   - component: {fileID: 8772591518895535662}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BLTR2
   m_TagString: Rooms
   m_Icon: {fileID: 0}
