@@ -126,11 +126,7 @@ GameObject:
   m_Layer: 8
   m_Name: Canon
   m_TagString: Untagged
-<<<<<<< Updated upstream
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
-=======
-  m_Icon: {fileID: 0}
->>>>>>> Stashed changes
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -142,11 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4801810649716752721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< Updated upstream
   m_LocalPosition: {x: 0.13, y: -0.05, z: 0}
-=======
-  m_LocalPosition: {x: 0.057, y: 0.008, z: 0}
->>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4898572997784592045}
@@ -273,11 +265,7 @@ MonoBehaviour:
     currentHealth: 5
   layers:
   - Enemy
-<<<<<<< Updated upstream
   - Player
-=======
-  - 
->>>>>>> Stashed changes
   cdDeath: 3
   animator: {fileID: 5181404819129212148}
   healthBar: {fileID: 0}
@@ -382,11 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   cooldown: 0
-<<<<<<< Updated upstream
   projectile: {fileID: 6689268562882726967, guid: 416a8bf27e7757349b13759cfc6b8828, type: 3}
-=======
-  projectile: {fileID: 7304506156458376552, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
->>>>>>> Stashed changes
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
 --- !u!114 &3144894537006055535
