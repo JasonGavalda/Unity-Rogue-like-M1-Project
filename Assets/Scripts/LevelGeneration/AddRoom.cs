@@ -5,6 +5,7 @@ using UnityEngine;
 public class AddRoom : MonoBehaviour
 {
     private RoomTemplates templates;
+
     // Start is called before the first frame update
     void Start()
     {

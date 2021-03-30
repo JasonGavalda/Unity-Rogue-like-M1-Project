@@ -21,7 +21,7 @@ public class RoomSpawner : MonoBehaviour
     {
         Destroy(gameObject, waitTime); // Détruit les points de spawn superflus pour alléger l'utilisation de mémoire.
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
-        Invoke("Spawn", 0.02f); // Spawn des pièces.
+        Invoke("Spawn", 0.6f); // Spawn des pièces.
     }
 
     void Spawn()
@@ -66,7 +66,12 @@ public class RoomSpawner : MonoBehaviour
                 {
                     try
                     {
-                        //Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
+                        foreach ( GameObject roomcopies in templates.rooms)
+                        {
+                            if (transform.position == roomcopies.transform.position)
+                                return;
+                        }
+                        Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
                         Destroy(gameObject);
                     }
                     catch (System.NullReferenceException e)
