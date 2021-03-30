@@ -675,6 +675,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6614084829646866020, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
+      propertyPath: bossRooms.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614084829646866020, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
+      propertyPath: bossRooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 3229169036756403175, guid: d296758a777bfd6418172b10def64034, type: 3}
+    - target: {fileID: 6614084829646866020, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
+      propertyPath: bossRooms.Array.data[1]
+      value: 
+      objectReference: {fileID: 3241852300005999598, guid: b362c696780226044b35bad40f1b2138, type: 3}
+    - target: {fileID: 6614084829646866020, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
+      propertyPath: bossRooms.Array.data[2]
+      value: 
+      objectReference: {fileID: 6999616362532144102, guid: 1bbb8c3bca7db704391fbb5366503858, type: 3}
+    - target: {fileID: 6614084829646866020, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
+      propertyPath: bossRooms.Array.data[3]
+      value: 
+      objectReference: {fileID: 3082721549932259495, guid: d8ba3006ff53ac045a652104e6b1db34, type: 3}
     - target: {fileID: 7909915845574986714, guid: e4f1cddb8b5d9e94ab85e26b92285716, type: 3}
       propertyPath: m_Name
       value: RoomTemplates
