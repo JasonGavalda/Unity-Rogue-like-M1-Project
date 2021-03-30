@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98cb59e1ab104034996fbaf3d03f07d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuName: create room
+  menuName: 
   open: 0
 --- !u!224 &1496901947
 RectTransform:
@@ -2677,7 +2677,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1676364270}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_MethodName: OpenMenu
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 506550612}
@@ -3120,9 +3120,9 @@ MonoBehaviour:
   errorText: {fileID: 789054939}
   roomNameText: {fileID: 1346383900}
   roomListContent: {fileID: 378718125}
-  roomListItemPrefab: {fileID: 4009758836169437570, guid: 714e9df2008953d4288735151f5faa28, type: 3}
+  roomListItemPrefab: {fileID: 1047036379006389533, guid: e3439cfe2a8e846478f8929fbda7d8c4, type: 3}
   playerListContent: {fileID: 83959045}
-  playerListItemPrefab: {fileID: 1946565197599530679, guid: 0d4824b44337fa54c9c07a3a302788e4, type: 3}
+  playerListItemPrefab: {fileID: 7723277116699238523, guid: a2eee3dfbf0ed544dad67d49f54c0145, type: 3}
   startGameButton: {fileID: 1697333023}
 --- !u!1 &1697333023
 GameObject:
