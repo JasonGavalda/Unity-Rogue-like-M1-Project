@@ -9,7 +9,7 @@ public class AttackCAC : Attack
     public float radius;
     protected Collider2D[] colliders;
 
-    protected override void useAttack()
+    public override void useAttack()
     {
         colliders = Physics2D.OverlapCircleAll(center.transform.position,radius,layersToCheck);
         foreach (Collider2D entity in colliders)

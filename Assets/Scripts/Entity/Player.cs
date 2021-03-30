@@ -44,11 +44,19 @@ public class Player : Entity
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            this.Attack("basic");
+            //this.Attack("basic");
+            if (basicAttack.canAttack())
+            {
+                animateAttack();
+            }
         }
-        else if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2"))
         {
-            this.Attack("special");
+            //this.Attack("special");
+            if (specialAttack.canAttack())
+            {
+                animateSpecialAttack();
+            }
         }
         animateMove();
     }
@@ -59,12 +67,17 @@ public class Player : Entity
         //animator.SetTrigger("specialAttack");
         if (pString == "basic")
         {
-            basicAttack.tryAttack();
-            animateAttack();
+            //basicAttack.tryAttack();
+            //animateAttack();
+            basicAttack.useAttack();
         }
 
         else if (pString == "special")
-            specialAttack.tryAttack();
+        {
+            //specialAttack.tryAttack();
+            //animateSpecialAttack(); // L'animation se charge de lancer l'attaque au bon moment
+            specialAttack.useAttack();
+        }
     }
 
     override

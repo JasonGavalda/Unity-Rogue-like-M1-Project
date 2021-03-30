@@ -4,17 +4,24 @@ using UnityEngine;
 
 public class Dash : Attack
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    private float dashTime;
+    public float dashTimeStart;
+    public float dashSpeed;
+    public float direction;
 
-
-    }
-
-    // Update is called once per frame
-    override protected void useAttack() { 
+    override public void useAttack() { 
         Rigidbody2D rb = attackUser.getRigidBody();
-        rb.MovePosition(rb.transform.position + new Vector3(20,0,0));
+        dashTime = dashTimeStart;
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            direction = Input.GetAxis("Horizontal");
+        }
+        while (dashTime >= 0)
+        {
+            rb.MovePosition(new Vector3(direction * dashSpeed, 0, 0));
+            dashTime -= Time.deltaTime;
+        }
+       
     }
     
 }
