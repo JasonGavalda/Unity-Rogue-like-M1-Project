@@ -72,7 +72,7 @@ public class RoomSpawner : MonoBehaviour
                     catch (System.NullReferenceException e)
                     {
                         other.GetComponent<RoomSpawner>().spawned = false;
-                        Destroy(gameObject);
+                        //Destroy(gameObject);
                     }
                 }
                 spawned = true;
