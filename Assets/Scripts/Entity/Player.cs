@@ -47,7 +47,10 @@ public class Player : Entity
             //this.Attack("basic");
             if (basicAttack.canAttack())
             {
-                animateAttack();
+                if (!PV.IsMine)
+                {
+                    animateAttack();
+                }
             }
         }
         if (Input.GetButtonDown("Fire2"))
@@ -55,10 +58,16 @@ public class Player : Entity
             //this.Attack("special");
             if (specialAttack.canAttack())
             {
-                animateSpecialAttack();
+                if (!PV.IsMine)
+                {
+                    animateSpecialAttack();
+                }
             }
         }
-        animateMove();
+        if (!PV.IsMine)
+        {
+            animateMove();
+        }
     }
 
     void Attack(string pString)
