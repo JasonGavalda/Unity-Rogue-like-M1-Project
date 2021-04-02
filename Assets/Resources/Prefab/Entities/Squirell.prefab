@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   cooldown: 3
-  projectile: {fileID: 6689268562882726967, guid: 416a8bf27e7757349b13759cfc6b8828, type: 3}
+  projectile: Bullet
   cannon: {fileID: 4814588248391376221}
   bulletSpeed: 5
 --- !u!58 &7861649704526353888

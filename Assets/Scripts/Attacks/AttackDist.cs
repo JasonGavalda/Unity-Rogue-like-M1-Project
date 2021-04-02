@@ -7,7 +7,7 @@ using System.IO;
 public class AttackDist : Attack
 {
     // Start is called before the first frame update
-    public GameObject projectile;
+    public string projectile;
     public GameObject cannon;
     public float bulletSpeed;
 
@@ -17,7 +17,7 @@ public class AttackDist : Attack
     {
         shootTarget = attackUser.getShootTarget();
         Vector2 directionTarget = new Vector2(shootTarget.x - this.transform.position.x, shootTarget.y - this.transform.position.y);
-        GameObject bullet = PhotonNetwork.Instantiate(Path.Combine("Prefab", "projectile"), cannon.transform.position, cannon.transform.rotation);
+        GameObject bullet = PhotonNetwork.Instantiate(Path.Combine("Prefab", projectile), cannon.transform.position, cannon.transform.rotation);
         bullet.GetComponent<Bullet>().launch(directionTarget.normalized, bulletSpeed, damage, attackUser.getInt(), layersToCheck);       
     }
 }

@@ -187,6 +187,7 @@ MonoBehaviour:
   badColor: {r: 0, g: 0, b: 0, a: 0}
   basicAttack: {fileID: 6579609244078315301}
   specialAttack: {fileID: 4495550340668017272}
+  cam: {fileID: 0}
 --- !u!114 &6579609244078315301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   cooldown: 0
-  projectile: {fileID: 7304506156458376552, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
+  projectile: RockBullet
   cannon: {fileID: 4801810649716752721}
   bulletSpeed: 5
 --- !u!114 &1003224085517812125
