@@ -36,12 +36,9 @@ public abstract class Entity : MonoBehaviour
     private SpriteRenderer sprite;
     private float invulnerableTime = 0;
 
-    PhotonView PV;
 
     private void Awake()
     {
-        PV = GetComponent<PhotonView>();
-
         sprite = GetComponent<SpriteRenderer>();
         
         if (sprite == null)
@@ -140,20 +137,12 @@ public abstract class Entity : MonoBehaviour
 
     public void animateAttack()
     {
-        if (!PV.IsMine)
-        {
-            animator.SetTrigger("Attack");
-        }
-        
+        animator.SetTrigger("Attack");
     }
 
     public void animateSpecialAttack()
     {
-        if (!PV.IsMine)
-        {
-            animator.SetTrigger("SpecialAttack");
-        }
-        
+        animator.SetTrigger("SpecialAttack");
     }
 
     public void UpdateHealth()
