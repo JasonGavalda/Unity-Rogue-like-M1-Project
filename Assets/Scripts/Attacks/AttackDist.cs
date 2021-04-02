@@ -11,7 +11,7 @@ public class AttackDist : Attack
 
     private Vector2 shootTarget;
     
-    protected override void useAttack()
+    public override void useAttack()
     {
         shootTarget = attackUser.getShootTarget();
         Vector2 directionTarget = new Vector2(shootTarget.x - this.transform.position.x, shootTarget.y - this.transform.position.y);

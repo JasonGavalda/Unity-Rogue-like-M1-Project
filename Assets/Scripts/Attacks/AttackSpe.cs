@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackSpe : Attack
 {
-    protected override void useAttack()
+    public override void useAttack()
     {
         throw new System.NotImplementedException();
     }

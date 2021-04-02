@@ -26,14 +26,13 @@ public class RoomTemplates : MonoBehaviour
         {
             for (int i = rooms.Count-1; i >=0; i--)
             {
-                if(i == rooms.Count-1)
-                {
                     if (rooms[i].name == "B(Clone)" || rooms[i].name == "B2(Clone)")
                     {
                         Instantiate(bossRooms[0], rooms[i].transform.position, Quaternion.identity);
                         Destroy(rooms[i]);
                         // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
+                        break;
                     }
                     else if (rooms[i].name == "L(Clone)" || rooms[i].name == "L2(Clone)")
                     {
@@ -41,6 +40,7 @@ public class RoomTemplates : MonoBehaviour
                         Destroy(rooms[i]);
                         // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
+                        break;
                     }
                     else if (rooms[i].name == "R(Clone)" || rooms[i].name == "R2(Clone)")
                     {
@@ -48,6 +48,7 @@ public class RoomTemplates : MonoBehaviour
                         Destroy(rooms[i]);
                         // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
+                        break;
                     }
                     else if (rooms[i].name == "T(Clone)" || rooms[i].name == "T2(Clone)")
                     {
@@ -55,8 +56,8 @@ public class RoomTemplates : MonoBehaviour
                         Destroy(rooms[i]);
                         // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
+                        break;
                     }
-                }
             }
         }
         else

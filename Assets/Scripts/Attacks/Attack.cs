@@ -50,7 +50,7 @@ public abstract class Attack : MonoBehaviour
             nextAttackTime -= Time.deltaTime;
     }
 
-    abstract protected void useAttack();
+    abstract public void useAttack();
 
 
 }
