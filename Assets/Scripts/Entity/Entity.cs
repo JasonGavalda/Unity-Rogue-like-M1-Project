@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 
 public abstract class Entity : MonoBehaviour
@@ -35,8 +36,12 @@ public abstract class Entity : MonoBehaviour
     private SpriteRenderer sprite;
     private float invulnerableTime = 0;
 
+    PhotonView PV;
+
     private void Awake()
     {
+        PV = GetComponent<PhotonView>();
+
         sprite = GetComponent<SpriteRenderer>();
         
         if (sprite == null)
@@ -135,12 +140,20 @@ public abstract class Entity : MonoBehaviour
 
     public void animateAttack()
     {
-        animator.SetTrigger("Attack");
+        if (!PV.IsMine)
+        {
+            animator.SetTrigger("Attack");
+        }
+        
     }
 
     public void animateSpecialAttack()
     {
-        animator.SetTrigger("SpecialAttack");
+        if (!PV.IsMine)
+        {
+            animator.SetTrigger("SpecialAttack");
+        }
+        
     }
 
     public void UpdateHealth()

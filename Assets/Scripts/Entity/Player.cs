@@ -8,6 +8,9 @@ public class Player : Entity
     public Attack basicAttack;
     public Attack specialAttack;
 
+    [SerializeField]
+    private Camera cam;
+
     Rigidbody2D RB;
     PhotonView PV;
 
@@ -42,15 +45,18 @@ public class Player : Entity
 
     private void Update()
     {
+        if (!PV.IsMine)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
             //this.Attack("basic");
             if (basicAttack.canAttack())
             {
-                if (!PV.IsMine)
-                {
-                    animateAttack();
-                }
+                animateAttack();
+                
             }
         }
         if (Input.GetButtonDown("Fire2"))
@@ -58,16 +64,12 @@ public class Player : Entity
             //this.Attack("special");
             if (specialAttack.canAttack())
             {
-                if (!PV.IsMine)
-                {
-                    animateSpecialAttack();
-                }
+                animateSpecialAttack();
+                
             }
         }
-        if (!PV.IsMine)
-        {
-            animateMove();
-        }
+        animateMove();
+        
     }
 
     void Attack(string pString)
@@ -92,7 +94,7 @@ public class Player : Entity
     override
     public Vector2 getShootTarget()
     {
-        Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = GetComponentInChildren<Camera>().ScreenToWorldPoint(Input.mousePosition);
         return pos;// return mouse pos
     }
 }
