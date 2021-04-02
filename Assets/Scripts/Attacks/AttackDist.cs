@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class AttackDist : Attack
 {
@@ -15,7 +17,7 @@ public class AttackDist : Attack
     {
         shootTarget = attackUser.getShootTarget();
         Vector2 directionTarget = new Vector2(shootTarget.x - this.transform.position.x, shootTarget.y - this.transform.position.y);
-        GameObject bullet = Instantiate(projectile, cannon.transform.position, cannon.transform.rotation);
+        GameObject bullet = PhotonNetwork.Instantiate(Path.Combine("Prefab", "projectile"), cannon.transform.position, cannon.transform.rotation);
         bullet.GetComponent<Bullet>().launch(directionTarget.normalized, bulletSpeed, damage, attackUser.getInt(), layersToCheck);       
     }
 }
