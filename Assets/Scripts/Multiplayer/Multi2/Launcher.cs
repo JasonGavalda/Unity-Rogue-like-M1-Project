@@ -76,7 +76,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             waitTime -= Time.deltaTime;
         }
-        PhotonNetwork.LoadLevel(1);
+        //PhotonNetwork.LoadLevel(1);
 
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);

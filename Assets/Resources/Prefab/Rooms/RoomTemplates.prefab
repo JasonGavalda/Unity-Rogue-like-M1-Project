@@ -88,10 +88,10 @@ MonoBehaviour:
   - {fileID: 9036042687361635256, guid: da530dd2a94366041b6ad19eef1bef61, type: 3}
   - {fileID: 1898347308236302584, guid: 8a3ed5febd7c45d4c8436a8edf6be61d, type: 3}
   bossRooms:
-  - {fileID: 3229169036756403175, guid: d8ba3006ff53ac045a652104e6b1db34, type: 3}
+  - {fileID: 3229169036756403175, guid: d296758a777bfd6418172b10def64034, type: 3}
   - {fileID: 3241852300005999598, guid: b362c696780226044b35bad40f1b2138, type: 3}
   - {fileID: 6999616362532144102, guid: 1bbb8c3bca7db704391fbb5366503858, type: 3}
-  - {fileID: 3082721549932259495, guid: d296758a777bfd6418172b10def64034, type: 3}
+  - {fileID: 3082721549932259495, guid: d8ba3006ff53ac045a652104e6b1db34, type: 3}
   rooms: []
   closedRoom: {fileID: 1408009332105688161, guid: 12c7380999e37ea4da87c936f5df5df1, type: 3}
   waitTime: 0
