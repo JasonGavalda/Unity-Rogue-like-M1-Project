@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using TMPro;
+using Photon.Realtime;
 
 public class RoomTemplates : MonoBehaviour
 {
@@ -18,6 +21,11 @@ public class RoomTemplates : MonoBehaviour
     public float waitTime; // Temps d'attente pour faire spawner le boss
     private bool spawnedBoss;
     // public GameObject boss;
+
+    public List<GameObject> GetRooms()
+    {
+        return rooms;
+    }
 
     // Update is called once per frame
     void Update()
@@ -56,7 +64,7 @@ public class RoomTemplates : MonoBehaviour
                         Destroy(rooms[i]);
                         // Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
-                        break;
+                    break;
                     }
             }
         }

@@ -18,6 +18,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListItemPrefab;
     [SerializeField] GameObject startGameButton;
 
+    public float waitTime = 10;
+
     private void Awake()
     {
         Instance = this;
@@ -70,6 +72,12 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
                         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListItem>().SetUp(players[i]);
         }
+        while (waitTime >= 0)
+        {
+            waitTime -= Time.deltaTime;
+        }
+        PhotonNetwork.LoadLevel(1);
+
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
     }
@@ -123,6 +131,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(2);
+
     }
 }
