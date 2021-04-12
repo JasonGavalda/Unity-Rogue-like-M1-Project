@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Multiplayer2.unity
     guid: 5569f358195b4104eae6869de42414da
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/enemygentest.unity
     guid: 059901a7c33e6af4dab9c3dc53050e88
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Shared level.unity
     guid: fae5222d93a1ac04b9bd8d5545558e7b
+  - enabled: 1
+    path: Assets/Scenes/lvl1.unity
+    guid: 599c5a190e06120458674d0a0e77f8f9
   m_configObjects: {}

@@ -212,6 +212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (7)
@@ -5233,6 +5237,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (2)
@@ -6286,6 +6294,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (4)
@@ -6477,6 +6489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (5)
@@ -7157,6 +7173,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (3)
@@ -8546,6 +8566,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1003224085517812125, guid: 423f3a8248691f748a87a9ec01d544f0, type: 3}
+      propertyPath: viewIdField
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4898572997784592045, guid: 423f3a8248691f748a87a9ec01d544f0, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9402,6 +9426,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (1)
@@ -9762,6 +9790,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0
@@ -9953,6 +9985,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1372134509}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0 (6)
@@ -10238,6 +10274,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2790692298751920640, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1455073817613326822, guid: aa072cb5807bde740b1ad61981f0cbb1, type: 3}
       propertyPath: m_RootOrder
       value: 13
