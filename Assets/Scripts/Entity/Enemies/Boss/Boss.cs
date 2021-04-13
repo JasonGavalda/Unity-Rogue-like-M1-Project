@@ -6,6 +6,7 @@ using UnityEngine;
 public class Boss : Enemy
 {
     private bool isEnraged = false;
+    private bool isAfraid = true;
     public float forceX;
     public float forceY;
     public float nextWayPointDistance = 3f;
@@ -29,6 +30,11 @@ public class Boss : Enemy
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
         //InvokeRepeating("animateMove", 0f, 0.5f);
+    }
+
+    public void setAfraid() 
+    { 
+        isAfraid = false;
     }
 
     void moveTowardPos(Vector2 pos)
@@ -102,6 +108,12 @@ public class Boss : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (this.stats.currentHealth < this.stats.maxHealth && !isEnraged)
+        {
+            isEnraged=true;
+            animateTransformation();
+        }
+
         if (path == null || aTarget == null)
             return;
 
@@ -125,9 +137,9 @@ public class Boss : Enemy
         {
             StartCoroutine(Punching());
         }
-        if (punch.canAttack())
+        if (punch.canAttack() && !isAfraid)
             moveTowardPos((Vector2)path.vectorPath[currentWayPoint]);
-        else if (!isPunching)
+        else if (!isPunching || isAfraid)
         {
             Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
             moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));

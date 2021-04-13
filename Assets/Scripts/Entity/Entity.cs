@@ -150,6 +150,11 @@ public abstract class Entity : MonoBehaviour
         animator.SetTrigger("SpecialAttack");
     }
 
+    public void animateTransformation()
+    {
+        animator.SetTrigger("Transformation");
+    }
+
     public void UpdateHealth()
     {
         if (healthBar == null)

@@ -36,7 +36,7 @@ public class AttackCACBoss : AttackCAC
         switch (i)
         {
             case 0:
-                colliders3 = Physics2D.OverlapCircleAll(center3.transform.position, radius, layersToCheck);
+                colliders = Physics2D.OverlapCircleAll(center.transform.position, radius, layersToCheck);
                 foreach (Collider2D entity in colliders)
                 {
                     if (entity.gameObject != this.gameObject)
@@ -50,7 +50,7 @@ public class AttackCACBoss : AttackCAC
                 break;
 
             case 1:
-                colliders3 = Physics2D.OverlapCircleAll(center1.transform.position, radius, layersToCheck);
+                colliders1 = Physics2D.OverlapCircleAll(center1.transform.position, radius, layersToCheck);
                 foreach (Collider2D entity in colliders1)
                 {
                     if (entity.gameObject != this.gameObject)
@@ -63,7 +63,7 @@ public class AttackCACBoss : AttackCAC
                 }
                 break;
             case 2:
-                colliders3 = Physics2D.OverlapCircleAll(center2.transform.position, radius, layersToCheck);
+                colliders2 = Physics2D.OverlapCircleAll(center2.transform.position, radius, layersToCheck);
                 foreach (Collider2D entity in colliders2)
                 {
                     if (entity.gameObject != this.gameObject)
