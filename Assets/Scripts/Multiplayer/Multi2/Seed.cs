@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Seed : MonoBehaviourPunCallbacks
 {
-    public int seedValue = -1;
+    public int seedValue;
 
     private void Awake()
     {

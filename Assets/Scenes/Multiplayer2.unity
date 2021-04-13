@@ -3260,7 +3260,7 @@ MonoBehaviour:
   playerListContent: {fileID: 83959045}
   playerListItemPrefab: {fileID: 7723277116699238523, guid: a2eee3dfbf0ed544dad67d49f54c0145, type: 3}
   startGameButton: {fileID: 1697333023}
-  seed: {fileID: 0}
+  seed: {fileID: 2002847748}
   seedText: {fileID: 93924104}
 --- !u!114 &1676364276
 MonoBehaviour:
