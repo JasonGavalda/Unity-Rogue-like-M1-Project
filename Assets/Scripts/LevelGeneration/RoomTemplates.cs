@@ -70,7 +70,7 @@ public class RoomTemplates : MonoBehaviour
             /*
             if (spawnedBoss)
             {
-                //PhotonNetwork.LoadLevel(2);
+                PhotonNetwork.LoadLevel(2);
                 spawnedBoss = false;
             }*/
         }

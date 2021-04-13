@@ -53,18 +53,18 @@ public abstract class Entity : MonoBehaviour
         stats.currentHealth = stats.maxHealth;
     }
 
-    //private void DestroyEntity()
-    //{
-    //    Destroy(this.gameObject);
-    //}
+    private void DestroyEntity()
+    {
+        Destroy(this.gameObject);
+    }
 
-    public abstract void Die();
-    //{
-    //    isDead = true;
-    //    GetComponent<Collider2D>().enabled = false;
-    //    Invoke("DestroyEntity", 0f);
-    //    //this.enabled = false;
-    //}
+    void Die()
+    {
+        isDead = true;
+        GetComponent<Collider2D>().enabled = false;
+        Invoke("DestroyEntity", 0f);
+        //this.enabled = false;
+    }
 
     public bool getIsDead() { return isDead; }
 
@@ -86,13 +86,9 @@ public abstract class Entity : MonoBehaviour
         StartCoroutine(invulnerabily());
         StartCoroutine(hitBlink());
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
-        Debug.Log("grosse patate uwu");
         UpdateHealth();
         if (stats.currentHealth <= 0)
-        {
-            Debug.Log("argh");
             this.Die();
-        }
     }
 
     public void Heal(int pHeal) { 
