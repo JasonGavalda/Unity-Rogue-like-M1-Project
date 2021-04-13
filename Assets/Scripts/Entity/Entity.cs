@@ -137,7 +137,7 @@ public abstract class Entity : MonoBehaviour
 
     public void animateMove()
     {
-        animator.SetBool("Speed", true);
+        animator.SetFloat("Speed", 1);
     }
 
     public void animateAttack()
