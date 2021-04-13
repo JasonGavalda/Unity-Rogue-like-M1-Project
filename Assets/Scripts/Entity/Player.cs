@@ -72,7 +72,7 @@ public class Player : Entity
                 
             }
         }
-        animateMove();
+        animateMovePayer();
         
     }
 

@@ -28,7 +28,7 @@ public class Bear : Enemy
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
-        InvokeRepeating("animateMove", 0f, 0.5f);
+        //InvokeRepeating("animateMove", 0f, 0.5f);
     }
 
     void moveTowardPos(Vector2 pos)
@@ -67,8 +67,10 @@ public class Bear : Enemy
             return;
 
         if (seeker.IsDone() && aTarget)
+        {
+            animateMove();
             seeker.StartPath(rb.position, aTarget.transform.position, OnPathComplete);
-
+        }
     }
 
     void OnPathComplete(Path p)
@@ -91,6 +93,12 @@ public class Bear : Enemy
         isPunching = false;
 
     }
+
+    public void usePunch()
+    {
+        punch.useAttack();
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
