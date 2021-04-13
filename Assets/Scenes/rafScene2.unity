@@ -6429,6 +6429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6253876194541728597, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
       propertyPath: m_Name
       value: BrutoBear2_0
