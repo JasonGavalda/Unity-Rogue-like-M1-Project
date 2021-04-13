@@ -22,6 +22,11 @@ public class RoomTemplates : MonoBehaviour
     private bool spawnedBoss;
     // public GameObject boss;
 
+    void Start()
+    {
+        Random.seed = GameObject.Find("Seed").GetComponent<Seed>().GetSeedValue();
+    }
+
     public List<GameObject> GetRooms()
     {
         return rooms;
