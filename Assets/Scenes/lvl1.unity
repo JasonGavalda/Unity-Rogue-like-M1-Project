@@ -5199,6 +5199,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2576162081473578926, guid: 6d1779ef924e1754992f42ff9deb98a9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2576162081473578926, guid: 6d1779ef924e1754992f42ff9deb98a9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2768529046988304337, guid: 6d1779ef924e1754992f42ff9deb98a9, type: 3}
       propertyPath: viewIdField
       value: 1
@@ -7379,7 +7387,7 @@ RectTransform:
   m_Children:
   - {fileID: 1946623954}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
