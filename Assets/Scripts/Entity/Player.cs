@@ -60,7 +60,6 @@ public class Player : Entity
             if (basicAttack.canAttack())
             {
                 animateAttack();
-                
             }
         }
         if (Input.GetButtonDown("Fire2"))
