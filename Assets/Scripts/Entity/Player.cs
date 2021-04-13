@@ -14,10 +14,14 @@ public class Player : Entity
     Rigidbody2D RB;
     PhotonView PV;
 
+    PlayerManager playerManager;
+
     private void Awake()
     {
         RB = GetComponent<Rigidbody2D>();
         PV = GetComponent<PhotonView>();
+
+        playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
     }
 
     private void Start()
@@ -96,5 +100,10 @@ public class Player : Entity
     {
         Vector2 pos = GetComponentInChildren<Camera>().ScreenToWorldPoint(Input.mousePosition);
         return pos;// return mouse pos
+    }
+
+    override public void Die()
+    {
+        playerManager.Die();
     }
 }

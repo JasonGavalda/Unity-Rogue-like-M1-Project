@@ -130,8 +130,15 @@ public class Bear : Enemy
             Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
             moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));
         }
+    }
 
-        
+    override public void Die()
+    {
+        isDead = true;
+        GetComponent<Collider2D>().enabled = false;
+        //Invoke("DestroyEntity", 0f);
+        Destroy(this.gameObject);
+        //this.enabled = false;
     }
 }
 
