@@ -87,4 +87,6 @@ public class CACEnemy : Enemy
         else
             transform.localScale = new Vector3(comp * 1f, 1f, 1f);
     }
+
+    public override void Die(){}
 }

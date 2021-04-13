@@ -43,4 +43,13 @@ public class Squirell : Enemy
 
     }
 
+    override public void Die()
+    {
+        isDead = true;
+        GetComponent<Collider2D>().enabled = false;
+        //Invoke("DestroyEntity", 0f);
+        Destroy(this.gameObject);
+        //this.enabled = false;
+    }
+
 }
