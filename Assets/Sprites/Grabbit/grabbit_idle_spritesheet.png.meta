@@ -64,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,10 +110,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 39
-        width: 458
-        height: 378
+        x: 0
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,10 +131,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 519
-        y: 39
-        width: 457
-        height: 378
+        x: 512
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1030
-        y: 39
-        width: 459
-        height: 369
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1543
-        y: 39
-        width: 458
-        height: 369
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2055
-        y: 39
-        width: 457
-        height: 362
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: grabbit_idle_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 2566
-        y: 39
-        width: 459
-        height: 362
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

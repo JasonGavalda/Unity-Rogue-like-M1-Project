@@ -22,9 +22,9 @@ public class Squirell : Enemy
         }
 
 
-        if (this.shoot.canAttack())
+        if (this.shoot.tryAttack())
         {
-            this.shoot.tryAttack();
+            this.shoot.useAttack();
             currentAnimationFrame = animationTime;
         }
 

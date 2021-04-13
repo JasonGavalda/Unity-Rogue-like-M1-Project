@@ -19,9 +19,8 @@ public class Boss : Enemy
     bool isPunching;
 
     Seeker seeker;
-    public AttackCAC punch;
+    public AttackCACBoss punch;
 
-    // Start is called before the first frame update
     void Start()
     {
         isPunching = false;
@@ -29,7 +28,7 @@ public class Boss : Enemy
         rb = GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, 0.5f);
-        InvokeRepeating("animateMove", 0f, 0.5f);
+        //InvokeRepeating("animateMove", 0f, 0.5f);
     }
 
     void moveTowardPos(Vector2 pos)
@@ -68,8 +67,11 @@ public class Boss : Enemy
             return;
 
         if (seeker.IsDone() && aTarget)
+        {
+            animateMove();
             seeker.StartPath(rb.position, aTarget.transform.position, OnPathComplete);
-
+            
+        }
     }
 
     void OnPathComplete(Path p)
@@ -93,12 +95,11 @@ public class Boss : Enemy
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        isEnraged = setState();
+    void PunchingMovement(int i) {
+        punch.useAttackMovement(i);
     }
 
+    // Update is called once per frame
     void FixedUpdate()
     {
         if (path == null || aTarget == null)
@@ -116,8 +117,11 @@ public class Boss : Enemy
         }
 
         float distanceWithTarget = Vector2.Distance(this.punch.center.transform.position, aTarget.transform.position);
+        float distanceWithTarget1 = Vector2.Distance(this.punch.center1.transform.position, aTarget.transform.position);
+        float distanceWithTarget2 = Vector2.Distance(this.punch.center2.transform.position, aTarget.transform.position);
+        float distanceWithTarget3 = Vector2.Distance(this.punch.center3.transform.position, aTarget.transform.position);
 
-        if (distanceWithTarget <= punch.radius && punch.canAttack())
+        if ((distanceWithTarget <= punch.radius || distanceWithTarget1 <= punch.radius || distanceWithTarget2 <= punch.radius || distanceWithTarget3 <= punch.radius) && punch.canAttack())
         {
             StartCoroutine(Punching());
         }
@@ -128,5 +132,7 @@ public class Boss : Enemy
             Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
             moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));
         }
+
+
     }
 }

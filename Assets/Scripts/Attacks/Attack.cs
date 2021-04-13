@@ -31,7 +31,7 @@ public abstract class Attack : MonoBehaviour
         if (nextAttackTime <= 0f)
         {
             nextAttackTime = cooldown;
-            useAttack();
+            //useAttack();
             return true;
         }
         else

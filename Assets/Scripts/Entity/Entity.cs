@@ -129,10 +129,15 @@ public abstract class Entity : MonoBehaviour
         sprite.color = col;
     }
 
-    public void animateMove()
+    public void animateMovePayer()
     {
         animator.SetFloat("Speed", Mathf.Max(Mathf.Abs(Input.GetAxis("Horizontal")), Mathf.Abs(Input.GetAxis("Vertical"))) *stats.speed);
         
+    }
+
+    public void animateMove()
+    {
+        animator.SetBool("Speed", true);
     }
 
     public void animateAttack()
