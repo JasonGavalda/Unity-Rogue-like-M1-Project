@@ -24,14 +24,17 @@ public class Squirell : Enemy
 
         if (this.shoot.tryAttack())
         {
+            
             this.shoot.useAttack();
             currentAnimationFrame = animationTime;
+            animateAttack();
         }
 
 
         Vector2 distance = new Vector2(aTarget.transform.position.x - this.transform.position.x, aTarget.transform.position.y - this.transform.position.y);
         if (distance.magnitude < distanceMax)
         {
+            //animateMove();
             distance.Normalize();
             Vector2 backwardRun = new Vector2(-distance.x * stats.speed, -distance.y * stats.speed);
             this.rb.AddForce(backwardRun);

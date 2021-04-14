@@ -87,7 +87,8 @@ public abstract class Entity : MonoBehaviour
         if (stats.currentHealth <= 0)
         {
             Debug.Log("argh"+pDamage);
-            this.Die();
+            //this.Die();
+            this.animateDeath();
         }
     }
 
@@ -143,6 +144,11 @@ public abstract class Entity : MonoBehaviour
     public void animateAttack()
     {
         animator.SetTrigger("Attack");
+    }
+
+    public void animateDeath()
+    {
+        animator.SetBool("Death",!animator.GetBool("Death"));
     }
 
     public void animateSpecialAttack()

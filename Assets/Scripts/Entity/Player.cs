@@ -107,6 +107,6 @@ public class Player : Entity
         {
             playerManager.Die();
         }
-            
+        animateDeath();  
     }
 }
