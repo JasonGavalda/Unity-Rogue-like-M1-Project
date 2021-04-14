@@ -84,10 +84,10 @@ public abstract class Entity : MonoBehaviour
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
        
         UpdateHealth();
-        if (stats.currentHealth <= 0)
+        if (stats.currentHealth <= 0 && !isDead)
         {
-            Debug.Log("argh"+pDamage);
             //this.Die();
+            isDead = true;
             this.animateDeath();
         }
     }
@@ -148,7 +148,7 @@ public abstract class Entity : MonoBehaviour
 
     public void animateDeath()
     {
-        animator.SetTrigger("Death");
+        animator.SetBool("Death",!animator.GetBool("Death"));
     }
 
     public void animateSpecialAttack()
