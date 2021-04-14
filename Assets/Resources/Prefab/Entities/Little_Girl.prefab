@@ -424,6 +424,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2182793168871080623}
   - {fileID: 2494436147013864234}
+  - {fileID: 859938018272278764}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -476,13 +477,13 @@ MonoBehaviour:
   ShowParameterInspector: 1
   m_SynchronizeParameters:
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Attack
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: SpecialAttack
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Speed
   m_SynchronizeLayers:
   - SynchronizeType: 0
