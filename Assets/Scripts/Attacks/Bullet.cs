@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Photon.Pun;
 
 public class Bullet : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Bullet : MonoBehaviour
     private Collider2D[] colliders;
     private Vector2 vel;
     public string obstacleLayer;
+
+
 
     // Update is called once per frame
     public void launch(Vector2 direction, float speed, int pDamage, int intelligence, int layerstocheck)
@@ -44,13 +47,21 @@ public class Bullet : MonoBehaviour
             if (ent != null)
             {
                 ent.TakeDamage(damage);
-                Destroy(gameObject);
+                PhotonView photonView = PhotonView.Get(this);
+                photonView.RPC("DestroyBullet", RpcTarget.All);
             }
             else if (collider.gameObject.layer == LayerMask.NameToLayer(obstacleLayer))
             {
-                Destroy(gameObject);
+                PhotonView photonView = PhotonView.Get(this);
+                photonView.RPC("DestroyBullet", RpcTarget.All);
             }
         }
+    }
+
+    [PunRPC]
+    private void DestroyBullet()
+    {
+        Destroy(gameObject);
     }
 
     private void Update()
