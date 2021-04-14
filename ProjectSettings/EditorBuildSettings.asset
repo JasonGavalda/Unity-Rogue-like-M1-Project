@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/enemygentest.unity
     guid: 059901a7c33e6af4dab9c3dc53050e88
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: fba911e65014f574e9cdb8e0b8af3c96
   m_configObjects: {}
