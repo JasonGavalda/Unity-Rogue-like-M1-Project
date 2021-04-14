@@ -72,12 +72,6 @@ public class RoomTemplates : MonoBehaviour
                     break;
                     }
             }
-            /*
-            if (spawnedBoss)
-            {
-                //PhotonNetwork.LoadLevel(2);
-                spawnedBoss = false;
-            }*/
         }
         else
         {
