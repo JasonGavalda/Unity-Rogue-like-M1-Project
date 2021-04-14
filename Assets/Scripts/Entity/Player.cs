@@ -97,7 +97,7 @@ public class Player : Entity
     override
     public Vector2 getShootTarget()
     {
-        Vector2 pos = GetComponentInChildren<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = /*GetComponentInChildren<Camera>()*/cam.ScreenToWorldPoint(Input.mousePosition);
         return pos;// return mouse pos
     }
 

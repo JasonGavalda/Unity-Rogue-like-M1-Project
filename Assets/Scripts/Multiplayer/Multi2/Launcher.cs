@@ -80,7 +80,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             Debug.Log("Master Seed");
-            seed.seedValue = Random.Range(0, 1000);
+            seed.seedValue = 42;//Random.Range(0, 1000);
             seedText.text = seed.GetSeedValue().ToString("0000");
 
         }

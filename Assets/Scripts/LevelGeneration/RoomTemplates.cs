@@ -24,7 +24,7 @@ public class RoomTemplates : MonoBehaviour
 
     void Start()
     {
-        Random.seed = GameObject.Find("Seed").GetComponent<Seed>().GetSeedValue();
+        Random.InitState(GameObject.Find("Seed").GetComponent<Seed>().GetSeedValue());
     }
 
     public List<GameObject> GetRooms()
