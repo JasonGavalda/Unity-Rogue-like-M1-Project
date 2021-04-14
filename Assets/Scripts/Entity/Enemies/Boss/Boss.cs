@@ -142,8 +142,8 @@ public class Boss : Enemy
             moveTowardPos((Vector2)path.vectorPath[currentWayPoint]);
         else if (!isPunching || isAfraid)
         {
-            Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, aTarget.transform.position.y).normalized;
-            moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, aTarget.transform.position.y));
+            Vector2 backwardDirection = new Vector2(this.transform.position.x - aTarget.transform.position.x, this.transform.position.y-aTarget.transform.position.y).normalized;
+            moveTowardPos(new Vector2(6 * backwardDirection.x + this.transform.position.x, 6 * backwardDirection.y+ aTarget.transform.position.y));
         }
 
 
