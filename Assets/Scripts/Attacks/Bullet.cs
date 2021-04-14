@@ -44,11 +44,11 @@ public class Bullet : MonoBehaviour
             if (ent != null)
             {
                 ent.TakeDamage(damage);
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
             else if (collider.gameObject.layer == LayerMask.NameToLayer(obstacleLayer))
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
     }
@@ -58,7 +58,7 @@ public class Bullet : MonoBehaviour
         timeLived += Time.deltaTime;
         if(timeLived > lifeTime)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 
