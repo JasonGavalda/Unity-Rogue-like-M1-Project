@@ -136,13 +136,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stats:
     armor: 1
-    maxHealth: 1
+    maxHealth: 5
     strengh: 1
     intelligence: 1
     invulnerabilityTime: 1
     size: 1
     speed: 12
-    currentHealth: 1
+    currentHealth: 5
   layers:
   - Player
   cdDeath: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4fc8ac004aa7244b28fdf81204fd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
   cooldown: 3
   projectile: Bullet
   cannon: {fileID: 4814588248391376221}

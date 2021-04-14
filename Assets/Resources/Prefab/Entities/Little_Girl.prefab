@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6755756814876807165}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.188, y: -0.036, z: 0}
+  m_LocalPosition: {x: 0.0783, y: -0.015, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7681193303370472376}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    armor: 2
+    armor: 1
     maxHealth: 20
     strengh: 1
     intelligence: 1
@@ -314,10 +314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48018796c4dd5954fac07d4b089d1114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 10
   cooldown: 0.5
   center: {fileID: 6755756814876807165}
-  radius: 0.3
+  radius: 0.1
 --- !u!50 &7849000854902700720
 Rigidbody2D:
   serializedVersion: 4
@@ -352,18 +352,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0046572834, y: -0.018635496}
+  m_Offset: {x: -0.0042079464, y: -0.0051517636}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.30476192, y: 0.30476192}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17562428, y: 0.282729}
+  m_Size: {x: 0.14417033, y: 0.29531386}
   m_EdgeRadius: 0
 --- !u!95 &7965216926189574625
 Animator:
