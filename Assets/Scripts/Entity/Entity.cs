@@ -62,6 +62,7 @@ public abstract class Entity : MonoBehaviour
     //    Destroy(this.gameObject);
     //}
 
+    [PunRPC]
     public abstract void Die();
     //{
     //    isDead = true;
@@ -154,6 +155,7 @@ public abstract class Entity : MonoBehaviour
 
     public void animateDeath()
     {
+        photonView.RPC("Die", RpcTarget.All);
         animator.SetBool("Death",!animator.GetBool("Death"));
     }
 
@@ -170,14 +172,14 @@ public abstract class Entity : MonoBehaviour
     [PunRPC]
     public void UpdateHealth()
     {
-        if (photonView.IsMine) { 
+        //if (photonView.IsMine) { 
             if (healthBar == null)
                 return;
 
             print(stats.currentHealth / stats.maxHealth);
             healthBar.GetComponent<Scrollbar>().size = stats.currentHealth / stats.maxHealth;
             SetColor();
-        }
+        //}
     }
 
     void SetColor()
