@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 7861649704526353888}
   - component: {fileID: -8758739482877077344}
   - component: {fileID: -4821902932582954127}
+  - component: {fileID: 5009898710063227475}
   m_Layer: 9
   m_Name: Squirell
   m_TagString: Untagged
@@ -228,6 +229,8 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: -4821902932582954127}
+  - {fileID: 5009898710063227475}
+  - {fileID: 0}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -247,6 +250,22 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 1
   m_UseLocal: 1
+--- !u!114 &5009898710063227475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716803078077546266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7cb724808c322458aa4d15f5035fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &4814588248391376221
 GameObject:
   m_ObjectHideFlags: 0
