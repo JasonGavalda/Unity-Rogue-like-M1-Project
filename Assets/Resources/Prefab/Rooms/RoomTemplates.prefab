@@ -95,3 +95,4 @@ MonoBehaviour:
   rooms: []
   closedRoom: {fileID: 1408009332105688161, guid: 12c7380999e37ea4da87c936f5df5df1, type: 3}
   waitTime: 0
+  boss: {fileID: 1939315989455145205, guid: 6d1779ef924e1754992f42ff9deb98a9, type: 3}
