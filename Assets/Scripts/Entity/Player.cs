@@ -58,7 +58,7 @@ public class Player : Entity
         if (Input.GetButtonDown("Fire1"))
         {
             //this.Attack("basic");
-            if (basicAttack.canAttack())
+            if (basicAttack.tryAttack())
             {
                 animateAttack();
             }
@@ -66,7 +66,7 @@ public class Player : Entity
         if (Input.GetButtonDown("Fire2"))
         {
             //this.Attack("special");
-            if (specialAttack.canAttack())
+            if (specialAttack.tryAttack())
             {
                 animateSpecialAttack();
                 
