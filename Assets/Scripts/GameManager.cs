@@ -40,8 +40,9 @@ public class GameManager : MonoBehaviour
                 numberDeadEnemies++;
             }
         }
-        if ((numberEnemiesInit - numberDeadEnemies) == 0 && !isBeginning && isEnd)
+        if ((numberEnemiesInit - numberDeadEnemies) == 0 && !isBeginning && !isEnd)
         {
+            isEnd = true;
             print("You Win");
             PhotonNetwork.LoadLevel(3);
         }
