@@ -176,9 +176,11 @@ MonoBehaviour:
   - {fileID: 248572626304178169, guid: 0820da53f6b7a7b4b909d2aa73bbd27d, type: 3}
   - {fileID: 374968415657693928, guid: 1e4980975056da241b5700880699c7c8, type: 3}
   - {fileID: 8326360449246000912, guid: d4729c80820092e4f95eadf9518ad546, type: 3}
-  closedRoom: {fileID: 1408009332105688161, guid: 12c7380999e37ea4da87c936f5df5df1, type: 3}
+  bossRooms: []
   rooms: []
+  closedRoom: {fileID: 1408009332105688161, guid: 12c7380999e37ea4da87c936f5df5df1, type: 3}
   waitTime: 0
+  boss: {fileID: 0}
 --- !u!4 &688258460
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +205,6 @@ GameObject:
   m_Component:
   - component: {fileID: 886002857}
   - component: {fileID: 886002856}
-  - component: {fileID: 886002855}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -211,14 +212,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &886002855
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886002854}
-  m_Enabled: 1
 --- !u!20 &886002856
 Camera:
   m_ObjectHideFlags: 0

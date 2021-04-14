@@ -180,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3902820803176257294, guid: c627770ed2dc918419ec4380baf0959e, type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAAAIIewBGTYRZwIAAA8FAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxTQKlt9YhpId8TEgnF1+EtMYaZMkjyQGS4b93JQvsUl8Qbz/03tu1v4hQtgHmtFkZwR81B/JjRPyZfBv1wQc40K1Wa/EJ55x3wV3lk2jIeaVOaMRTX2Z1Dc4I9lNtpU9OEGyVKLWpl3wLubbOIlxSaQFDRjtfrRD6GpED/owXvuSIp2zuT594WiSjEx4ZKAemT00myQKfLJvfZrFmnEzSBJ80S2exuKttFZO0boB7IX2LLLnclnSJCkXGnGTi2zItpbCRI3HHJniQ08a2qBATuKCoORBLJ1MEKhDbyvmew/LnsrTgoiWGHu+EQfO6vuSX7hytqd117D6obP1NaZLdBGJd18f/EsZpCJdG1w/ni9Mgy1WC7V7pkVHrBp4P4bsB9+DSnsod3Uh4r0A96ZXRreIYdKb1pa2F7K7/e9GWV8B2Pd5RvQLbZjC5aPp5wF7DKcg/5FLUm2D+TQespQ6Wh70Ag+P5jYTD1tjYAlHP4o+FN7odrlcM3AtjHYaiSuXpbXRrfCpZBs+8mtbl2igIcCTdgKLSHV+wjbue4VVscO1V5J76FyleHmPn9+OqJMB9fpJchV70/jIsW+n9I9jquXVSKOhJ+8AT+pRrpboVG3pyLlu3pqRsULZtBf93tUiymM3L2YJ+n7Pp7WIzH09ZOr+dZYzxdAbAKAm7JxTqpPKlIxrtwampvrnCPTt/X0YrQ5uw7tzQ/Up81npguVClXjMDoJ67DhfiYPASfDX5kgs0aA3OCRXmTb4KIjXbAS8ujYqgdHlwhhZ9l4I04kM7jxQkDx+UgpzI6S9QSwMEFAAACAgAAAgh7GFfhEBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKBpZl5mpllooV5srGpZZK5rnGyobmpmVFycoqhWWpqcqJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7AEZNhFnAgAADwUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7GFfhEBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAtAIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABsAwAAAAA=
+      value: UEsDBBQAAAgIAAAIIezBnoiacQIAACMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMrm0Y2wQc99YaQnrIx4R0cvFFyGusQZY8khwgGf57V7KNXXpCvN23evt25S/CpamBWaXXmuePKgfyY0LcmXyfDMEHONKdkhv+CX3OO89t6ZKoz3mllivEQ0czqgKrOfspd8IlBwg2khdKV6t8B6ky1iBcUGEAQ1pZx5YIfU3IEX9uEkc54SmK3ekTT0kwOeORgbSgR6nBNIhmt7N43jGCaZIkHrrrmC2xkUzQqobcdTHww2kyn4XRfPUtiLsKY8hTJfbcsUIXmkbuMqaE4KbTTeyp9r6ktDYNdo0JOafogxcbTmcIlMB3pXVdjenPRWHAdjZpelpyjYa2dckv1bpcUbNvRX9Q0XglQXTr1bVVH/9LuAl9uNCqeugvDgN3iS0527/SE6PGjuYwhpcj7d68AxV7uhXwXoJ8UmutGplj0OrGURsD0XL4e+ktLYHtB7yVegU29TCNfuz90F0PZ9/+MRW82vr53rbARihvud8V0Dij3yjYb5LpSiDqVPwx8EZ345XrAvdcG4uhrkvp5G1Vo10qWXnPXDeNTZWW4OFOdA2SCnt6wTL2eoZXsdG1V5F76h5Xd3kX69/MFcXDQ34QXIVe1OEyLFOqwyOY8rmxgksYRLvAE/qUKinbFRt70tM2jS4oG9F2Dc//XS0SJIu4WCT0LmazebKNb2YsjOeLiLE8XAAwSvzucYl9UvHSCu3swanJobjEPeu/OZO1prVf91zTw5p/VmpkOZeF2jANIJ/bChfhoPESfJ/5Kudo0Aas5dLPm3xlRCi2hzy7FMp8p6uj1TQbqmSk5h/KOiQjqf/IZORMzn8BUEsDBBQAAAgIAAAIIexhX4RAbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSgaWZeZqZZaKFebKxqWWSua5xsqG5qZlRcnKKoVlqanKiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezBnoiacQIAACMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIexhX4RAbQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c627770ed2dc918419ec4380baf0959e, type: 3}
@@ -339,6 +339,46 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[69].second.m_TileSpriteIndex
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4521847925328948104, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: BrutoBear2_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4521847925328948104, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: Squirell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186901644971146613, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: BrutoBear2_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186901644971146613, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: Squirell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: BrutoBear2_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: Squirell
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[2]
+      value: Health vials
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[3]
+      value: Health vials
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[4]
+      value: Health vials
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778854750037949619, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[5]
+      value: Health vials
+      objectReference: {fileID: 0}
     - target: {fileID: 5783459788314636429, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
       propertyPath: isInstantiated
       value: 1
@@ -390,6 +430,14 @@ PrefabInstance:
     - target: {fileID: 5880548241876350263, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
       propertyPath: m_Name
       value: Entry Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070753841415771572, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: BrutoBear2_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9070753841415771572, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: Squirell
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8784e063b7af7c442b8a9b543daf0654, type: 3}
