@@ -148,7 +148,7 @@ public abstract class Entity : MonoBehaviour
 
     public void animateDeath()
     {
-        animator.SetBool("Death",!animator.GetBool("Death"));
+        animator.SetTrigger("Death");
     }
 
     public void animateSpecialAttack()
