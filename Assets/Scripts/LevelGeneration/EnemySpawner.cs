@@ -25,8 +25,9 @@ public class EnemySpawner : MonoBehaviour
 
     void Spawn()
     {
-        if (PhotonNetwork.IsMasterClient) { 
-            int randEnemy = Random.Range(0, enemies.Length);
+        int randEnemy = Random.Range(0, enemies.Length);
+        if (PhotonNetwork.IsMasterClient)
+        {
             Debug.Log(randEnemy);
             PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", enemies[randEnemy]), transform.position, transform.rotation);
         //Instantiate(enemies[randEnemy], transform.position, transform.rotation);
