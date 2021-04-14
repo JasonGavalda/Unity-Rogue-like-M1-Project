@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 2f033343d3ebf934fa075ceb040071e4
+guid: 19e5d72018a00b14aa56dfbcb60058e5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6928365714507401850
-    second: girl_idle_0
+      213: -6591952779927564079
+    second: boss_idle_kid_0
   - first:
-      213: 4166714165072006024
-    second: girl_idle_1
+      213: 1107162869877157292
+    second: boss_idle_kid_1
+  - first:
+      213: 8899043357171966205
+    second: boss_idle_kid_2
+  - first:
+      213: 8077258567438326207
+    second: boss_idle_kid_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 210
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl_idle_0
+      name: boss_idle_kid_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 64
-        height: 64
+        y: 0
+        width: 832
+        height: 832
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6857ac8371089df90800000000000000
-      internalID: -6928365714507401850
+      spriteID: 1d0d4405fdda484a0800000000000000
+      internalID: -6591952779927564079
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_idle_1
+      name: boss_idle_kid_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 832
         y: 0
-        width: 64
-        height: 64
+        width: 832
+        height: 832
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,8 +136,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88b84b9f47423d930800000000000000
-      internalID: 4166714165072006024
+      spriteID: cada78f93ce6d5f00800000000000000
+      internalID: 1107162869877157292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_idle_kid_2
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 832
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0e801c8c0cf7b70800000000000000
+      internalID: 8899043357171966205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_idle_kid_3
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 0
+        width: 832
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb954273fdf281070800000000000000
+      internalID: 8077258567438326207
       vertices: []
       indices: 
       edges: []

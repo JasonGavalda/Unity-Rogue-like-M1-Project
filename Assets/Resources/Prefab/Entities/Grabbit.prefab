@@ -219,14 +219,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
-    armor: 2
-    maxHealth: 5
+    armor: 1
+    maxHealth: 50
     strengh: 1
     intelligence: 1
     invulnerabilityTime: 0.5
     size: 1
     speed: 4
-    currentHealth: 5
+    currentHealth: 50
   layers:
   - Player
   cdDeath: 3
