@@ -24,7 +24,7 @@ public class PlayerManager : MonoBehaviour
 
     void CreateController()
     {
-        controller = PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", "Pink_Monster"), Vector3.zero, Quaternion.identity, 0, new object[] { PV.ViewID });
+        controller = PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", "Little_Girl"), Vector3.zero, Quaternion.identity, 0, new object[] { PV.ViewID });
     }
 
     public void Die()
