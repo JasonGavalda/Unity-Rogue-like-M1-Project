@@ -28,7 +28,7 @@ public class RoomSpawner : MonoBehaviour
     {
         if (spawned == false)
         {
-            Random.seed += 1;
+            //Random.seed += 1;
             if (openingDirection == 1)
             {
                 // On créé une Room avec une porte Sud.
