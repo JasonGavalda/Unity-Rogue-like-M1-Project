@@ -77,20 +77,16 @@ public abstract class Entity : MonoBehaviour
     public void TakeDamage(int pDamage) {
         if (invulnerableTime > 0)
             return;
-        /*
-        Debug.Log("took damage : " + pDamage);
-        Debug.Log("reduce to : " + pDamage / stats.armor);
-        Debug.Log("hp going from: " + stats.currentHealth);
-        **/
         invulnerableTime = stats.invulnerabilityTime;
         StartCoroutine(invulnerabily());
         StartCoroutine(hitBlink());
+        Debug.Log("grosse patate uwu" + pDamage);
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
-        Debug.Log("grosse patate uwu");
+       
         UpdateHealth();
         if (stats.currentHealth <= 0)
         {
-            Debug.Log("argh");
+            Debug.Log("argh"+pDamage);
             this.Die();
         }
     }

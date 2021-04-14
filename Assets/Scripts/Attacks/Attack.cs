@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Attack : MonoBehaviour
 {
-    public int damage;
+    public int damage = 10;
 
     public float cooldown;
     float nextAttackTime = 0f;

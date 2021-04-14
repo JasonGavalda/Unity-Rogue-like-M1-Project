@@ -286,7 +286,7 @@ MonoBehaviour:
   stats:
     armor: 1
     maxHealth: 20
-    strengh: 1
+    strengh: 0
     intelligence: 1
     invulnerabilityTime: 1
     size: 1.5
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48018796c4dd5954fac07d4b089d1114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 10
   cooldown: 0.5
   center: {fileID: 6755756814876807165}
   radius: 0.1
