@@ -41,7 +41,7 @@ public abstract class Entity : MonoBehaviour
 
     private void Awake()
     {
-        photonView = PhotonView.Get(this);
+        //photonView = PhotonView.Get(this);
 
         sprite = GetComponent<SpriteRenderer>();
         
@@ -62,7 +62,7 @@ public abstract class Entity : MonoBehaviour
     //    Destroy(this.gameObject);
     //}
 
-    [PunRPC]
+    //[PunRPC]
     public abstract void Die();
     //{
     //    isDead = true;
@@ -88,9 +88,9 @@ public abstract class Entity : MonoBehaviour
         Debug.Log("grosse patate uwu" + pDamage);
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
 
-        //UpdateHealth();
+        UpdateHealth();
         
-        photonView.RPC("UpdateHealth", RpcTarget.All);
+        //photonView.RPC("UpdateHealth", RpcTarget.All);
         if (stats.currentHealth <= 0 && !isDead)
         {
             //this.Die();
@@ -155,7 +155,7 @@ public abstract class Entity : MonoBehaviour
 
     public void animateDeath()
     {
-        photonView.RPC("Die", RpcTarget.All);
+        //photonView.RPC("Die", RpcTarget.All);
         animator.SetBool("Death",!animator.GetBool("Death"));
     }
 
@@ -169,7 +169,7 @@ public abstract class Entity : MonoBehaviour
         animator.SetTrigger("Transformation");
     }
 
-    [PunRPC]
+    //[PunRPC]
     public void UpdateHealth()
     {
         //if (photonView.IsMine) { 

@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
+using System.IO;
 
 public class RoomTemplates : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class RoomTemplates : MonoBehaviour
 
     public float waitTime; // Temps d'attente pour faire spawner le boss
     private bool spawnedBoss;
-    public GameObject boss;
+    
 
     void Start()
     {
@@ -44,7 +45,8 @@ public class RoomTemplates : MonoBehaviour
                     {
                         Instantiate(bossRooms[0], rooms[i].transform.position, Quaternion.identity);
                         Destroy(rooms[i]);
-                        Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                        if (PhotonNetwork.IsMasterClient)
+                            PhotonNetwork.Instantiate(Path.Combine("Prefab","Entities","Grabbit"), rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
                         break;
                     }
@@ -52,7 +54,8 @@ public class RoomTemplates : MonoBehaviour
                     {
                         Instantiate(bossRooms[1], rooms[i].transform.position, Quaternion.identity);
                         Destroy(rooms[i]);
-                        Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                        if (PhotonNetwork.IsMasterClient)
+                            PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", "Grabbit"), rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
                         break;
                     }
@@ -60,7 +63,8 @@ public class RoomTemplates : MonoBehaviour
                     {
                         Instantiate(bossRooms[2], rooms[i].transform.position, Quaternion.identity);
                         Destroy(rooms[i]);
-                        Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                        if (PhotonNetwork.IsMasterClient)
+                            PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", "Grabbit"), rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
                         break;
                     }
@@ -68,9 +72,10 @@ public class RoomTemplates : MonoBehaviour
                     {
                         Instantiate(bossRooms[3], rooms[i].transform.position, Quaternion.identity);
                         Destroy(rooms[i]);
-                        Instantiate(boss, rooms[i].transform.position, Quaternion.identity);
+                        if (PhotonNetwork.IsMasterClient)
+                            PhotonNetwork.Instantiate(Path.Combine("Prefab", "Entities", "Grabbit"), rooms[i].transform.position, Quaternion.identity);
                         spawnedBoss = true;
-                    break;
+                        break;
                     }
             }
         }
