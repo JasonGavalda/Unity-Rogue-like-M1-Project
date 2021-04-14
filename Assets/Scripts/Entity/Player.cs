@@ -29,6 +29,7 @@ public class Player : Entity
         if (!PV.IsMine)
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
+            Destroy(GetComponentInChildren<Canvas>().gameObject);
         }
     }
 
