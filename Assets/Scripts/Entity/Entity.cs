@@ -36,9 +36,13 @@ public abstract class Entity : MonoBehaviour
     private SpriteRenderer sprite;
     private float invulnerableTime = 0;
 
+    PhotonView photonView;
+
 
     private void Awake()
     {
+        photonView = PhotonView.Get(this);
+
         sprite = GetComponent<SpriteRenderer>();
         
         if (sprite == null)
@@ -82,8 +86,10 @@ public abstract class Entity : MonoBehaviour
         StartCoroutine(hitBlink());
         Debug.Log("grosse patate uwu" + pDamage);
         stats.currentHealth = stats.currentHealth - (pDamage / stats.armor);
-       
-        UpdateHealth();
+
+        //UpdateHealth();
+        
+        photonView.RPC("UpdateHealth", RpcTarget.All);
         if (stats.currentHealth <= 0 && !isDead)
         {
             //this.Die();
@@ -161,14 +167,17 @@ public abstract class Entity : MonoBehaviour
         animator.SetTrigger("Transformation");
     }
 
+    [PunRPC]
     public void UpdateHealth()
     {
-        if (healthBar == null)
-            return;
+        if (photonView.IsMine) { 
+            if (healthBar == null)
+                return;
 
-        print(stats.currentHealth / stats.maxHealth);
-        healthBar.GetComponent<Scrollbar>().size = stats.currentHealth / stats.maxHealth;
-        SetColor();
+            print(stats.currentHealth / stats.maxHealth);
+            healthBar.GetComponent<Scrollbar>().size = stats.currentHealth / stats.maxHealth;
+            SetColor();
+        }
     }
 
     void SetColor()
