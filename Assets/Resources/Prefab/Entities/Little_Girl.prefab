@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4fc8ac004aa7244b28fdf81204fd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 1
   cooldown: 0
   projectile: RockBullet
   cannon: {fileID: 7764588338556355652}
@@ -424,6 +424,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2182793168871080623}
   - {fileID: 2494436147013864234}
+  - {fileID: 859938018272278764}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
