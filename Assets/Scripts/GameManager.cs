@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private int numberEnemiesInit;
     private int numberDeadEnemies;
     private bool isBeginning = true;
+    private bool isEnd = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,7 @@ public class GameManager : MonoBehaviour
                 numberDeadEnemies++;
             }
         }
-        if ((numberEnemiesInit - numberDeadEnemies) == 0 && !isBeginning)
+        if ((numberEnemiesInit - numberDeadEnemies) == 0 && !isBeginning && isEnd)
         {
             print("You Win");
             PhotonNetwork.LoadLevel(3);
