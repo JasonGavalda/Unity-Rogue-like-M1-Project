@@ -103,6 +103,10 @@ public class Player : Entity
 
     override public void Die()
     {
-        playerManager.Die();
+        if (PV.IsMine)
+        {
+            playerManager.Die();
+        }
+            
     }
 }

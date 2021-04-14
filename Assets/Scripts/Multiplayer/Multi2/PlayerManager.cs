@@ -30,6 +30,9 @@ public class PlayerManager : MonoBehaviour
     public void Die()
     {
         PhotonNetwork.Destroy(controller);
-        CreateController();
+        if (PV.IsMine)
+        {
+            CreateController();
+        }
     }
 }

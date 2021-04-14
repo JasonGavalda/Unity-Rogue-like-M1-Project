@@ -902,9 +902,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
-  - {fileID: 4716803078077546266, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
-  - {fileID: 6516593926343628523, guid: 2d448ff2b21540a4ea2ab887015483f2, type: 3}
+  - Health vials
+  - Squirell
+  - BrutoBear2_0
 --- !u!1 &1402478031076999614
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,8 +1012,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
-  - {fileID: 4716803078077546266, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
+  - Health vials
+  - Squirell
+  - BrutoBear2_0
 --- !u!1 &4668157439813724266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,8 +1059,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
-  - {fileID: 4716803078077546266, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
+  - Health vials
+  - Squirell
+  - BrutoBear2_0
 --- !u!1 &5990814941718870918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,8 +1106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 909723943031744706, guid: 63eef9a7db3055041ba88b32cf31c014, type: 3}
-  - {fileID: 4716803078077546266, guid: 60f49b519f1a77547b330723d687bbee, type: 3}
+  - Health vials
+  - Squirell
+  - BrutoBear2_0
 --- !u!1 &6069779416784839499
 GameObject:
   m_ObjectHideFlags: 0

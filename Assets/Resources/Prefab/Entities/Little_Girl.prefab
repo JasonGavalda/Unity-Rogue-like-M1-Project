@@ -303,7 +303,7 @@ MonoBehaviour:
   badColor: {r: 1, g: 0, b: 0, a: 1}
   basicAttack: {fileID: 8227330035098243632}
   specialAttack: {fileID: 1657687070881320813}
-  cam: {fileID: 0}
+  cam: {fileID: 7539376194270177226}
 --- !u!114 &8227330035098243632
 MonoBehaviour:
   m_ObjectHideFlags: 0
