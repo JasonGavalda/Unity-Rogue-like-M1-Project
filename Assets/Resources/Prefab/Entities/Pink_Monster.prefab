@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48018796c4dd5954fac07d4b089d1114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 10
   cooldown: 0.5
   center: {fileID: 8404679712968592104}
   radius: 0.3
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf4fc8ac004aa7244b28fdf81204fd42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 5
   cooldown: 0
   projectile: RockBullet
   cannon: {fileID: 4801810649716752721}
