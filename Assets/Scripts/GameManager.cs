@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Photon.Pun;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +12,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         enemies = new List<GameObject>();
-        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){ 
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Boss")){ 
            enemies.Add(enemy);
            numberEnemiesInit++;
         }
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print("nombre de boss = " + (numberEnemiesInit - numberDeadEnemies));
         numberDeadEnemies = 0;
         foreach (GameObject enemy in enemies)
         {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
         if ((numberEnemiesInit - numberDeadEnemies) == 0)
         {
             print("You Win");
+            PhotonNetwork.LoadLevel(3);
         }
     }
 }
